@@ -1,0 +1,116 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis_template.aux
+The style file: plain.bst
+Database file #1: thesis_ref.bib
+Warning--entry type for "cisco_report" isn't style-file defined
+--line 195 of file thesis_ref.bib
+Warning--entry type for "Whatsapp" isn't style-file defined
+--line 215 of file thesis_ref.bib
+Warning--entry type for "Snapchat" isn't style-file defined
+--line 225 of file thesis_ref.bib
+Warning--entry type for "Skype" isn't style-file defined
+--line 235 of file thesis_ref.bib
+Warning--entry type for "Facebook" isn't style-file defined
+--line 245 of file thesis_ref.bib
+Warning--entry type for "Linkedin" isn't style-file defined
+--line 255 of file thesis_ref.bib
+Warning--entry type for "Viber" isn't style-file defined
+--line 265 of file thesis_ref.bib
+Warning--entry type for "Fring" isn't style-file defined
+--line 275 of file thesis_ref.bib
+Warning--entry type for "Android" isn't style-file defined
+--line 285 of file thesis_ref.bib
+Warning--entry type for "delicious" isn't style-file defined
+--line 305 of file thesis_ref.bib
+Warning--entry type for "flickr" isn't style-file defined
+--line 315 of file thesis_ref.bib
+Warning--entry type for "youtube" isn't style-file defined
+--line 325 of file thesis_ref.bib
+Warning--entry type for "stackoverflow" isn't style-file defined
+--line 335 of file thesis_ref.bib
+Warning--entry type for "twitter" isn't style-file defined
+--line 345 of file thesis_ref.bib
+Warning--entry type for "gmail" isn't style-file defined
+--line 355 of file thesis_ref.bib
+Warning--entry type for "osxtag" isn't style-file defined
+--line 365 of file thesis_ref.bib
+Warning--entry type for "puitag" isn't style-file defined
+--line 375 of file thesis_ref.bib
+Warning--entry type for "mysqlicious" isn't style-file defined
+--line 385 of file thesis_ref.bib
+Warning--entry type for "scuttle" isn't style-file defined
+--line 395 of file thesis_ref.bib
+Warning--entry type for "toxi" isn't style-file defined
+--line 405 of file thesis_ref.bib
+Warning--entry type for "wordpress" isn't style-file defined
+--line 415 of file thesis_ref.bib
+Warning--entry type for "puiperformance" isn't style-file defined
+--line 425 of file thesis_ref.bib
+Warning--to sort, need author or key in cisco_report
+Warning--to sort, need author or key in puiperformance
+Warning--to sort, need author or key in Snapchat
+Warning--to sort, need author or key in Whatsapp
+Warning--to sort, need author or key in Skype
+Warning--to sort, need author or key in Viber
+Warning--to sort, need author or key in Facebook
+Warning--to sort, need author or key in Linkedin
+Warning--to sort, need author or key in Fring
+Warning--to sort, need author or key in Android
+Warning--to sort, need author or key in delicious
+Warning--to sort, need author or key in flickr
+Warning--to sort, need author or key in youtube
+Warning--to sort, need author or key in gmail
+Warning--to sort, need author or key in stackoverflow
+Warning--to sort, need author or key in twitter
+Warning--to sort, need author or key in osxtag
+Warning--to sort, need author or key in puitag
+Warning--to sort, need author or key in mysqlicious
+Warning--to sort, need author or key in scuttle
+Warning--to sort, need author or key in toxi
+Warning--to sort, need author or key in wordpress
+Warning--empty journal in boyd2006friends
+Warning--empty journal in mell2011nist
+Warning--empty journal in sunden2003material
+You've used 56 entries,
+            2118 wiz_defined-function locations,
+            758 strings with 11521 characters,
+and the built_in function-call counts, 15909 in all, are:
+= -- 1568
+> -- 536
+< -- 16
++ -- 231
+- -- 168
+* -- 932
+:= -- 2299
+add.period$ -- 136
+call.type$ -- 56
+change.case$ -- 253
+chr.to.int$ -- 0
+cite$ -- 81
+duplicate$ -- 685
+empty$ -- 1535
+format.name$ -- 168
+if$ -- 3569
+int.to.chr$ -- 0
+int.to.str$ -- 56
+missing$ -- 33
+newline$ -- 239
+num.names$ -- 68
+pop$ -- 392
+preamble$ -- 1
+purify$ -- 196
+quote$ -- 0
+skip$ -- 606
+stack$ -- 0
+substring$ -- 954
+swap$ -- 183
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 224
+warning$ -- 25
+while$ -- 133
+width$ -- 58
+write$ -- 492
+(There were 47 warnings)

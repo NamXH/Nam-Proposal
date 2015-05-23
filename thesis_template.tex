@@ -1,0 +1,189 @@
+\documentclass{uofsthesis-cs}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{algorithm2e}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\renewcommand{\labelitemii}{$\star$}
+
+% Documentation for the uofsthesis-cs class is given in uofsthesis-cs.dvi
+% 
+% It is recommended that you read the CGSR thesis preparation
+% guidelines before proceeding.
+% They can be found at http://www.usask.ca/cgsr/thesis/index.htm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRONTMATTER - In this section, specify information to be used to
+% typeset the thesis frontmatter.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% THESIS TITLE
+% Specify the title. Set the capitalization how you want it.
+\title{Graphy: Exploring the Potentials of the Contacts Application}
+
+% AUTHOR'S NAME
+% Your name goes here.
+\author{Nam Hoang}
+
+% DEGREE SOUGHT.  
+% Use \MSc or \PhD here
+\degree{\MSc}         
+
+% EXPECTED CONVOCATION DATE
+% Should be month/year, e.g. July 2004
+\convocationdate{October/2014}
+
+
+% NAME OF ACADEMIC UNIT
+%
+% The following two commands allow you to specify the academic unit you belong to.
+% This will appear on the title page as
+% ``<academic unit> of <department>''.
+% So if you are in the division of biomedical engineering you would need to do:
+% \department{Biomedical Engineering}
+% \academicunit{Division}
+%
+% The default is ``Department of Computer Science'' if these commands
+% are not given.
+%
+% If you are in a discipline other than Computer Science, uncomment the following line and
+% specify your discipline/department.  Default is 'Computer Science'.
+% \department{If not Computer Science, put the name of your department here}
+
+% If you are not in a department, but say, a division, uncomment the following line.
+% \academicunit{Put the type of academic unit you belong to here, e.g. Division, College}
+
+
+% PERMISSION TO USE ADDRESS
+%
+% If you are not in Compuer Science you will want to change the
+% address on the Permission to Use page.  This is done using the
+% \ptuaddress{}.  Example:
+%
+% \ptuaddress{Head of the Department of Computer Science\\
+% 176 Thorvaldson Building\\
+% 110 Science Place\\
+% University of Saskatchewan\\
+% Saskatoon, Saskatchewan\\
+% Canada\\
+% S7N 5C9
+% }
+
+% ABSTRACT
+\abstract{
+The number of mobile devices is growing very fast. Smart phones and tablets are step by step, replacing desktops and laptops as the primary method of computing in daily life. According to the 2014 annual report from Cisco \cite{cisco_report}, there were 406 million new smart phones and 92 million new tablets activated in 2013. Not only are smart devices increasing in popularity but they are becoming more and more powerful. The latest A8X chip which Apple uses for the iPad Air 2 contains 3 billion transistors and has 40\% more CPU performance and 2.5 times the graphics performance of its predecessor - the Apple A7 which had been released just a year before. Along with the rapid evolution of mobile devices, the applications on them are undergoing fast transformation. We can see many improvements in traditional applications (messaging, calling...) like multimedia text messages, video calls, voice over IP and so forth. However, the Contacts application has not change much while it has many potentials. In this thesis, we explore the potentials of providing custom information in the Contacts application and connecting the contacts together based on their relationships. We implemented a prototype of the new Contacts application which utilizes these two aspects then tested it among a group of users. Our results indicate that custom information and contact relationships are two important parts which should be included in today's Contacts applications.
+}
+
+% THESIS ACKNOWLEDGEMENTS -- This can be free-form.
+\acknowledgements{
+I would like to express my gratitude to my supervisor, Dr. Ralph Deters, for his guidance, support and advice during the study.
+
+Furthermore, I am thankful to my committee members, Dr. Julita Vassileva, and ... for their encouragement , valuable comments and suggestions.
+
+My thanks also go to my friends for their support and encouragement.
+
+Finally, I wish to express my love and gratitude to my beloved family for their profound understanding and boundless love throughout the duration of my study.
+}
+
+
+% THESIS DEDICATION -- Also free-form.  If you don't want a dedication, comment out the following
+% line.
+%\dedication{This is the thesis dedication (optional)}
+
+% LIST OF ABBREVIATIONS - Sample  
+% If you don't want a list of abbreviations, comment the following 4 lines.
+%\loa{\abbrev{SCUBA}{Self Contained Underwater Breathing Apparatus}
+%\abbrev{LOF}{List of Figures}
+%\abbrev{LOT}{List of Tables}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF FRONTMATTER SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Typeset the title page
+\maketitle
+
+% Typeset the frontmatter.  
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIRST CHAPTER OF THESIS BEGINS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input chapter1.tex
+\input chapter2.tex
+\input chapter3.tex
+\input chapter4.tex
+\input chapter5.tex
+
+% Since thesis chapters are very long and there are a lot of them, it is recommended
+% that you put each chapter in a separate .tex file and \input each one of them
+% in order.  For example:
+%
+% \input chap1.tex
+% \input chap2.tex
+% ...
+%
+% The \input command inserts contents of the specified file at the point of the command.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSEQUENT CHAPTERS (or \input's)  GO HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Bibliograpy should go here. BEFORE appendices!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Typeset the Bibliography.  The bibliography style used is "plain".
+% Optionally, you can specify the bibliography style to use:
+% \uofsbibliography[stylename]{yourbibfile}
+
+\uofsbibliography{thesis_ref}
+
+% If you are not using bibtex, comment the line above and uncomment
+% the line below.  
+%Follow the line below with a thebibliography environmentand bibitems.  
+% Note: use of bibtex is usually the preferred method.
+
+%\uofsbibliographynobibtex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDICES
+%
+% Any chapters appearing after the \appendix command get numbered with
+% capital letters starting with appendix 'A'.
+% New chapters from here on will be called 'Appendix A', 'Appendix B'
+% as opposed to 'Chapter 1', 'Chapter 2', etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Activate thesis appendix mode.
+%\uofsappendix
+
+%\chapter{Sample Appendix}
+
+%Stuff for this appendix goes here.
+
+%\chapter{Another Sample Appendix}
+
+%Stuff for this appendix goes here.
+
+
+\end{document}

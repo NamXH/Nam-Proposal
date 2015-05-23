@@ -1,0 +1,278 @@
+\begin{thebibliography}{10}
+
+\bibitem{Android}
+Android, http://www.android.com/.
+
+\bibitem{cisco_report}
+Cisco 2014 annual report.
+
+\bibitem{delicious}
+Delicious, http://delicious.com/.
+
+\bibitem{Facebook}
+Facebook, http://www.facebook.com/.
+
+\bibitem{flickr}
+Flickr, http://www.flickr.com/.
+
+\bibitem{Fring}
+Fring, http://www.fring.com/.
+
+\bibitem{gmail}
+Gmail, http://gmail.com/.
+
+\bibitem{Linkedin}
+Linkedin, http://www.linkedin.com/.
+
+\bibitem{mysqlicious}
+Mysqlicious, https://code.google.com/p/mysqlicious/.
+
+\bibitem{osxtag}
+Os x 10.9 tags, http://support.apple.com/kb/ht5839.
+
+\bibitem{scuttle}
+Scuttle, http://sourceforge.net/projects/scuttle/.
+
+\bibitem{Skype}
+Skype, http://www.skype.com/.
+
+\bibitem{Snapchat}
+Snapchat, http://www.snapchat.com/.
+
+\bibitem{stackoverflow}
+Stackoverflow, http://stackoverflow.com/.
+
+\bibitem{puitag}
+Tags: Database schemas,
+  http://tagging.pui.ch/post/37027745720/tags-database-schemas.
+
+\bibitem{puiperformance}
+Tagsystems: Performance tests,
+  http://tagging.pui.ch/post/37027746608/tagsystems-performance-testsg/.
+
+\bibitem{toxi}
+Toxi, http://toxi.co.uk/.
+
+\bibitem{twitter}
+Twitter, http://twitter.com/.
+
+\bibitem{Viber}
+Viber, http://www.viber.com/.
+
+\bibitem{Whatsapp}
+Whatsapp, http://www.whatsapp.com/.
+
+\bibitem{wordpress}
+Wordpress, http://wordpress.org/.
+
+\bibitem{youtube}
+Youtube, http://www.youtube.com/.
+
+\bibitem{abowd1999towards}
+Gregory~D Abowd, Anind~K Dey, Peter~J Brown, Nigel Davies, Mark Smith, and Pete
+  Steggles.
+\newblock Towards a better understanding of context and context-awareness.
+\newblock In {\em Handheld and ubiquitous computing}, pages 304--307. Springer,
+  1999.
+
+\bibitem{ailisto2002structuring}
+Heikki Ailisto, Petteri Alahuhta, Ville Haataja, Vesa Kyll{\"o}nen, and Mikko
+  Lindholm.
+\newblock Structuring context aware applications: Five-layer model and example
+  case.
+\newblock In {\em Proceedings of the Workshop on Concepts and Models for
+  Ubiquitous Computing}, pages 1--5, 2002.
+
+\bibitem{ames2007we}
+Morgan Ames and Mor Naaman.
+\newblock Why we tag: motivations for annotation in mobile and online media.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, pages 971--980. ACM, 2007.
+
+\bibitem{baldauf2007survey}
+Matthias Baldauf, Schahram Dustdar, and Florian Rosenberg.
+\newblock A survey on context-aware systems.
+\newblock {\em International Journal of Ad Hoc and Ubiquitous Computing},
+  2(4):263--277, 2007.
+
+\bibitem{boyd2006friends}
+Danah Boyd.
+\newblock Friends, friendsters, and myspace top 8: Writing community into being
+  on social network sites.
+\newblock 2006.
+
+\bibitem{boyd2007youth}
+Danah Boyd.
+\newblock Why youth (heart) social network sites: The role of networked publics
+  in teenage social life.
+\newblock {\em MacArthur foundation series on digital learning--Youth,
+  identity, and digital media volume}, pages 119--142, 2007.
+
+\bibitem{boyd2010social}
+Danah~M Boyd and Nicole~B Ellison.
+\newblock Social network sites: Definition, history, and scholarship.
+\newblock {\em Engineering Management Review, IEEE}, 38(3):16--31, 2010.
+
+\bibitem{budzik2000user}
+Jay Budzik and Kristian~J Hammond.
+\newblock User interactions with everyday applications as context for
+  just-in-time information access.
+\newblock In {\em Proceedings of the 5th international conference on
+  intelligent user interfaces}, pages 44--51. ACM, 2000.
+
+\bibitem{cattuto2007semiotic}
+Ciro Cattuto, Vittorio Loreto, and Luciano Pietronero.
+\newblock Semiotic dynamics and collaborative tagging.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  104(5):1461--1464, 2007.
+
+\bibitem{chen2003ontology}
+Harry Chen, Tim Finin, and Anupam Joshi.
+\newblock An ontology for context-aware pervasive computing environments.
+\newblock {\em The Knowledge Engineering Review}, 18(03):197--207, 2003.
+
+\bibitem{dey1998context}
+Anind~K Dey.
+\newblock Context-aware computing: The cyberdesk project.
+\newblock In {\em Proceedings of the AAAI 1998 Spring Symposium on Intelligent
+  Environments}, pages 51--54, 1998.
+
+\bibitem{eldridge1994autobiographical}
+Margery~A Eldridge, Philip~J Barnard, and Debra~A Bekerian.
+\newblock Autobiographical memory and daily schemas at work.
+\newblock {\em Memory}, 2(1):51--74, 1994.
+
+\bibitem{ellison2007benefits}
+Nicole~B Ellison, Charles Steinfield, and Cliff Lampe.
+\newblock The benefits of facebook “friends:” social capital and college
+  students’ use of online social network sites.
+\newblock {\em Journal of Computer-Mediated Communication}, 12(4):1143--1168,
+  2007.
+
+\bibitem{finkelstein2001placing}
+Lev Finkelstein, Evgeniy Gabrilovich, Yossi Matias, Ehud Rivlin, Zach Solan,
+  Gadi Wolfman, and Eytan Ruppin.
+\newblock Placing search in context: The concept revisited.
+\newblock In {\em Proceedings of the 10th international conference on World
+  Wide Web}, pages 406--414. ACM, 2001.
+
+\bibitem{gartner}
+Gartner.
+\newblock Predicts 2014: Apps, personal cloud and data analytics will drive new
+  consumer interactions.
+\newblock Technical report, Gartner, 2014.
+
+\bibitem{golder2006usage}
+Scott~A Golder and Bernardo~A Huberman.
+\newblock Usage patterns of collaborative tagging systems.
+\newblock {\em Journal of information science}, 32(2):198--208, 2006.
+
+\bibitem{gross2005information}
+Ralph Gross and Alessandro Acquisti.
+\newblock Information revelation and privacy in online social networks.
+\newblock In {\em Proceedings of the 2005 ACM workshop on Privacy in the
+  electronic society}, pages 71--80. ACM, 2005.
+
+\bibitem{gustavsen2002condor}
+Richard~Moe Gustavsen.
+\newblock Condor--an application framework for mobility-based context-aware
+  applications.
+\newblock In {\em Proceedings of the workshop on concepts and models for
+  ubiquitous computing}, volume~39, 2002.
+
+\bibitem{humphreys2007mobile}
+Lee Humphreys.
+\newblock Mobile social networks and social practice: A case study of
+  dodgeball.
+\newblock {\em Journal of Computer-Mediated Communication}, 13(1):341--360,
+  2007.
+
+\bibitem{indulska2003location}
+Jadwiga Indulska and Peter Sutton.
+\newblock Location management in pervasive systems.
+\newblock In {\em Proceedings of the Australasian information security workshop
+  conference on ACSW frontiers 2003-Volume 21}, pages 143--151. Australian
+  Computer Society, Inc., 2003.
+
+\bibitem{Jung2008}
+Younghee Jung, Akseli Anttila, and Jan Blom.
+\newblock {Designing for the evolution of mobile contacts application}.
+\newblock {\em Proceedings of the 10th international conference on Human
+  computer interaction with mobile devices and services - MobileHCI '08}, page
+  449, 2008.
+
+\bibitem{lamming1994forget}
+Mik Lamming and Mike Flynn.
+\newblock Forget-me-not: Intimate computing in support of human memory.
+\newblock In {\em Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human
+  Interface}, page~4. Citeseer, 1994.
+
+\bibitem{lampe2006face}
+Cliff Lampe, Nicole Ellison, and Charles Steinfield.
+\newblock A face (book) in the crowd: Social searching vs. social browsing.
+\newblock In {\em Proceedings of the 2006 20th anniversary conference on
+  Computer supported cooperative work}, pages 167--170. ACM, 2006.
+
+\bibitem{marlow2006ht06}
+Cameron Marlow, Mor Naaman, Danah Boyd, and Marc Davis.
+\newblock Ht06, tagging paper, taxonomy, flickr, academic article, to read.
+\newblock In {\em Proceedings of the seventeenth conference on Hypertext and
+  hypermedia}, pages 31--40. ACM, 2006.
+
+\bibitem{mell2011nist}
+Peter Mell and Tim Grance.
+\newblock The nist definition of cloud computing.
+\newblock 2011.
+
+\bibitem{millen2005social}
+David Millen, Jonathan Feinberg, and Bernard Kerr.
+\newblock Social bookmarking in the enterprise.
+\newblock {\em Queue}, 3(9):28--35, 2005.
+
+\bibitem{tagging}
+Trung~Van Nguyen and Alice Hae~Yun Oh.
+\newblock Users' needs for social tagging and sharing on mobile contacts.
+\newblock In {\em Proceedings of the 12th International Conference on Human
+  Computer Interaction with Mobile Devices and Services}, MobileHCI '10, pages
+  387--388, New York, NY, USA, 2010. ACM.
+
+\bibitem{prekop2003activities}
+Paul Prekop and Mark Burnett.
+\newblock Activities, context and ubiquitous computing.
+\newblock {\em Computer Communications}, 26(11):1168--1176, 2003.
+
+\bibitem{ryan1998enhanced}
+Nick~S Ryan, Jason Pascoe, and David~R Morse.
+\newblock Enhanced reality fieldwork: the context-aware archaeological
+  assistant.
+\newblock In {\em Computer applications in archaeology}. Tempus Reparatum,
+  1998.
+
+\bibitem{schilit1994disseminating}
+Bill~N Schilit and Marvin~M Theimer.
+\newblock Disseminating active map information to mobile hosts.
+\newblock {\em Network, IEEE}, 8(5):22--32, 1994.
+
+\bibitem{strang2004context}
+Thomas Strang and Claudia Linnhoff-Popien.
+\newblock A context modeling survey.
+\newblock In {\em Workshop Proceedings}, 2004.
+
+\bibitem{sunden2003material}
+Jenny Sund{\'e}n.
+\newblock Material virtualities: Approaching online textual embodiment.
+\newblock 2003.
+
+\bibitem{weiser1991computer}
+Mark Weiser.
+\newblock The computer for the 21st century.
+\newblock {\em Scientific american}, 265(3):94--104, 1991.
+
+\bibitem{Whittaker2002}
+Steve Whittaker, Quentin Jones, and Loren Terveen.
+\newblock Contact management: identifying contacts to support long-term
+  communication.
+\newblock In {\em Proceedings of the 2002 ACM conference on Computer supported
+  cooperative work}, pages 216--225. ACM, 2002.
+
+\end{thebibliography}

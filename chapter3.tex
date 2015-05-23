@@ -1,0 +1,353 @@
+\chapter{Design and Implementation}
+\label{implementation}
+Our proposed solution of Graphy was implemented into a working prototype running on iOS 8 devices (iPhone 4S, iPhone 5, iPhone 5S, iPod Touch...) which are backed up by a Linux server. Some of the features had to be left out due to the time constraint in the project schedule. In this section, some important features of Graphy as well as the implementation details of those features are described.
+\section{System Architecture}
+As shown in Figure \ref{fg:architecture}, the system contains 2 components: the mobile client and the backend server. The mobile client is an application which interacts directly with a user to capture his/her information. The backend server provides synchronization between multiple clients as well as interacts with other cloud services like Gmail, Facebook, LinkedIn...
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.6]{pics/architecture}
+\caption{System Architecture}\label{fg:architecture}
+\end{centering}
+\end{figure}
+
+\section{Mobile Client}
+The mobile client has all normal features from a modern Contact application such as adding/removing contacts, searching for contacts, marking contacts as favorite. Additionally, users can search for contacts based on the tags on the contacts.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.3]{pics/mainscreen}
+\caption{Main Screen}\label{fg:mainscreen}
+\end{centering}
+\end{figure}
+
+The feature that distinguishes Graphy from other Contacts applications lies on the contact profiles. As we can see from Figure \ref{fg:contactscreen}, a Graphy's contact profile consists of usual information plus the tags and the relationships. In this example, ``Chairman of Microsoft'' is a custom tag added by the user. The custom tags are implemented by 255-character text fields that cover most common use cases, and users can create as many tags as they want. In Graphy's contact profile, a relationship is demonstrated by 3 fields: the name of the relationship, the related person, and an optional detail about the relationship. In Figure \ref{fg:contactscreen}, Bill Henry Gates is the advisor of Satya Nandela. This relationship is shown by the ``=>'' symbol. Conversely, Jennifer Gates is the daughter of Bill Henry Gates so the symbol is reversed to ``<=''. These symbols are not the most attractive way to represent the relationships and we will design a better user interface in later prototypes. It is worth mentioning that the relationships are bi-directional. When the users tap on the relationships field, Graphy will bring them to the other contact. For example, tapping on Satya Nandela will display the full contact profile of Satya in which there is a relationship ``Advisor'' from Bill Henry Gates. Besides, all fields of a relationship are customizable.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.3]{pics/contactscreen}
+\caption{Contact Profile}\label{fg:contactscreen}
+\end{centering}
+\end{figure}
+
+A mobile client is fully functional in the offline mode thanks to the implementation of a local database which will be discussed later. When the client connects to the backend server it can synchronize its local database with the server's one. This design provides users with the ability to use multiple devices concurrently.
+
+\section{Backend Server}
+The backend server is built using Python and Django framework. It synchronizes the mobile clients via exposing a RESTful API. The mobile clients use appropriate HTTP requests to communicate with the server as the example in Table \ref{tb:restapi}.
+
+\begin{table}[!ht]
+\centering
+\caption{RESTful API}\label{tb:restapi}
+\begin{tabular}{| l | l | p{3.5cm} |} \hline
+\textbf{Verb} & \textbf{Request} & \textbf{Description}\\ \hline
+GET & /contacts/ & Retrieve all contacts\\ \hline
+POST & /contacts/ & Create a new contact\\ \hline
+GET & /contacts/\{id\} & Retrieve a contact with a specific Id\\ \hline
+PUT & /contacts/\{id\} & Update a contact\\ \hline
+DELETE & /contacts/\{id\} & Delete a contact\\ \hline
+\end{tabular}
+\end{table}
+
+In addition to providing an API, the backend server can also interact with other services like Gmail, LinkedIn, Facebook... Therefore, Graphy can import and export its contacts to third party services as well as captures social information from social networks.
+
+\section{Database}
+The databases play an important role in the system of Graphy. Since Graphy operates in both online and offline modes, the local database in a mobile client must contain all user's data. Furthermore, Graphy supports multiple devices concurrently so the databases on clients should synchronize flawlessly and efficiently.
+
+\subsection{Database Schema Design to Support Tagging}\label{databasedesign}
+The problem of tagging items has been around in industrial products for a while. It was popularized by websites associated with Web 2.0 and is an important feature of many Web 2.0 services. In 2003, Delicious - a social bookmarking website provided a service for its users to add tags to their bookmarks as a way to help find them later \cite{delicious}. Flickr \cite{flickr} also let users tag their photos with custom information, thus constructing flexible and easy metadata that enriched photos' information and made them highly searchable at the same time. Influenced by the success of Flickr and Delicious' popularized concept, many websites like Youtube \cite{youtube}, Gmail \cite{gmail}, StackOverFlow \cite{stackoverflow} also implemented tagging. Furthermore, the widespread microblogging service Twitter \cite{twitter} introduced the hashtags which let its users tag their own ``tweet'' easily by prefixing the tagged words with a hash symbol. The idea became widely popular and as a result Twitter became a powerful search engine for searching trends or news all over the world. Not only online web services used tags, the operating system OS X version 10.9 also provided colorful tagging labels \cite{osxtag} that helps users to tag their own files.
+
+In order to provide a powerful tagging system, we need an appropriate database schema. From the database point of view, the tagging problem can be defined as follow: we want to have a database schema where we can tag an item with as many tags as we want. Later on, we want to run queries to constrain the items to a union or intersection of tags. We also want to exclude\slash minus some tags from the search result \cite{puitag}. There are three popular different solutions with which we will examine as follows:
+
+\subsubsection{MySQLicious Solution}
+MySQLicious is a library which provides automated mirroring/backups of Delicious bookmarks into a MySQL database \cite{mysqlicious}. The schema of MySQLicious has only one table as shown in Table \ref{tb:mysqlicious}
+
+\begin{table}[!ht]
+\centering
+\caption{MySQLicious Schema}\label{tb:mysqlicious}
+\begin{tabular}{| l | p{5cm} | p{2cm} |} \hline
+id & url & tags\\ \hline
+1 & \url{http://www.ics.uci.edu/~fielding/pubs} & api\newline rest \newline research \\ \hline
+2 & \url{http://stackoverflow.com/questions/983030} & coding\newline .net\\ \hline
+3 & \url{http://www.ford.com/cars/mustang/} & cars\newline wishlist\\ \hline
+\end{tabular}
+\end{table}
+
+In this schema, the table is denormalized. The retrieving queries that can be apply on this schema are as follows:
+
+\textbf{Intersection}\newline
+\textit{Query for ``webservices+rest+coding'':}\newline\newline
+SELECT *\newline
+FROM `MyTable'\newline
+WHERE tags LIKE ``\%webservice\%''\newline
+AND tags LIKE ``\%rest\%''\newline
+AND tags LIKE ``\%coding\%''
+
+\textbf{Union}\newline
+\textit{Query for ``webservices|rest|coding'':}\newline\newline
+SELECT *\newline
+FROM `MyTable'\newline
+WHERE tags LIKE ``\%webservice\%''\newline
+OR tags LIKE ``\%rest\%''\newline
+OR tags LIKE ``\%coding\%''
+
+\textbf{Minus}\newline
+\textit{Query for ``webservices+rest-coding'':}\newline\newline
+SELECT *\newline
+FROM `MyTable'\newline
+WHERE tags LIKE ``\%webservice\%''\newline
+AND tags LIKE ``\%rest\%''\newline
+AND tags NOT LIKE ``\%coding\%''
+
+The advantages of this solution are:
+\begin{itemize}
+   \item Just one table.
+   \item The retrieving queries are very straight forward.
+   \item Can achieve results via full-text search which can be a little faster.
+\end{itemize}
+
+The disadvantages are:
+\begin{itemize}
+   \item We have a limit on the number of tags per item according to the size of the tags field. Normally we use a 256-byte field in our database (VARCHAR). Otherwise, if we use a text field or the like, the queries will become slow.
+   \item Doing processing on tags is hard and expensive. For example, it is difficult to provide suggestions on a new tag. Therefore, synonymous tag names like ``coding'' and ``programing'' have a high chance of happening.
+\end{itemize}
+
+\subsubsection{Scuttle Solution}
+Similar to Delicious, Scuttle \cite{scuttle} is a web-based social bookmarking system. It allows multiple users to store, share and tag their favorite links online. Scuttle organizes its data in two tables as shown in Figure \ref{fg:scuttle}. The table scCategories is the tag-table and has got a foreign key to the bookmark-table.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.5]{pics/scuttle}
+\caption{Scuttle Schema}\label{fg:scuttle}
+\end{centering}
+\end{figure}
+
+The retrieving queries we can apply on this schema are as follows:
+
+\textbf{Intersection}\newline
+\textit{Query for ``webservices+rest+coding'':}\newline\newline
+SELECT b.*\newline
+FROM `scBookmark' b, `scCategories' c\newline
+WHERE b.bId = c.bId\newline
+AND (c.category IN (`webservices', `rest', `coding'))\newline
+GROUP BY b.bId\newline
+HAVING COUNT(b.bId)=3
+
+Firstly, all combinations of bookmarks and tags are searched, where the tag is ``webservices'', ``rest'' or ``coding'' (c.category IN (`webservices', `rest', `coding')), then just the bookmarks that have all three tags are selected (HAVING COUNT(b.bId)=3).
+
+\textbf{Union}\newline
+\textit{Query for ``webservices|rest|coding'':}\newline\newline
+SELECT b.*\newline
+FROM `scBookmark' b, `scCategories' c\newline
+WHERE b.bId = c.bId\newline
+AND (c.category IN (`webservices', `rest', `coding'))\newline
+GROUP BY b.bId
+
+\textbf{Minus}\newline
+\textit{Query for ``webservices+rest-coding'':}\newline\newline
+SELECT b.*\newline
+FROM `scBookmark' b, `scCategories' c\newline
+WHERE b.bId = c.bId\newline
+AND (c.category IN (`webservices', `rest'))\newline
+AND b.bId NOT\newline
+IN (SELECT b.bId FROM scBookmarks b, scCategories c WHERE b.bId = c.bId AND c.category = 'coding')\newline
+GROUP BY b.bId\newline
+HAVING COUNT(b.bId) =2
+
+The advantages of this solution are:
+\begin{itemize}
+   \item The schema is more normalized than the MySQLicious solution.
+   \item Listing and doing processing on all tags in the system is rather easy.
+\end{itemize}
+
+The disadvantages are:
+\begin{itemize}
+   \item The retrieving queries have JOIN queries which might be more expensive.
+   \item There are many duplicated tags in the system since one tag record in the tag-table only associates with one item in the bookmark-table.
+\end{itemize}
+
+\subsubsection{Toxi Solution}
+Toxi \cite{toxi} an open-source software contributor came up with a three-table schema as shown in Figure \ref{fg:toxi}. The bookmarks and the tags are n-to-m related by making use of a tagmap table. As a result, we can use one tag for many bookmarks and vice versa. This structure is also used by the popular blogging platform WordPress \cite{wordpress}.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.65]{pics/toxi}
+\caption{Toxi Schema}\label{fg:toxi}
+\end{centering}
+\end{figure}
+
+The retrieving queries we can apply on this schema are as follows:
+
+\textbf{Intersection}\newline
+\textit{Query for ``webservices+rest+coding'':}\newline\newline
+SELECT b.*\newline
+FROM tagmap bt, bookmark b, tag t\newline
+WHERE bt.tag\_id = t.id\newline
+AND (t.name IN (`webservices', `rest', `coding'))\newline
+AND b.id = bt.bookmark\_id\newline
+GROUP BY b.id\newline
+HAVING COUNT(b.id)=3
+
+\textbf{Union}\newline
+\textit{Query for ``webservices|rest|coding'':}\newline\newline
+SELECT b.*\newline
+FROM tagmap bt, bookmark b, tag t\newline
+WHERE bt.tag\_id = t.id\newline
+AND (t.name IN (`webservices', `rest', `coding'))\newline
+AND b.id = bt.bookmark\_id\newline
+GROUP BY b.id
+
+\textbf{Minus}\newline
+\textit{Query for ``webservices+rest-coding'':}\newline\newline
+SELECT b.*\newline
+FROM bookmark b, tagmap bt, tag t\newline
+WHERE b.id = bt.bookmark\_id\newline
+AND (t.name IN (`webservices', `rest'))\newline
+% AND b.id NOT\newline % Probably typo
+AND b.id NOT IN (SELECT b.id FROM bookmark b, tagmap bt, tag t\newline
+WHERE b.id = bt.bookmark\_id AND bt.tag\_id = t.id AND t.name = `coding'\newline
+GROUP BY b.id\newline
+HAVING COUNT(b.id) =2
+
+The advantages of this solution are:
+\begin{itemize}
+   \item The schema is in the Third Normal Form. It is the most normalized solution of all three.
+   \item We can add extra information to each tag such as description, tag hierarchy. 
+   \item Doing processing on tags is easy.
+   \item Flexible, scaling well.
+\end{itemize}
+
+The disadvantages are:
+\begin{itemize}
+   \item The retrieving queries are quite expensive and can become very complicated. However, we can break down a complicated query and utilize the cache.
+   \item Altering or deleting bookmarks can lead to orphan tag unless we use cascading.
+\end{itemize}
+
+\subsubsection{Schema Performance Analysis}
+\paragraph{Test Setups}
+Eachhome \cite{puiperformance} did performance tests on all the solutions mentioned above: MySQLicious, MySQLicious with full-text search, Scuttle and Toxi. The test setups are as follows:
+
+For each schema, there are 4 databases of 1000, 10000, 100000 and 1 million bookmarks. The tags associated with the bookmarks were random English words. Each bookmark got 1 to 10 tags attached to it. Every schema had exactly the same data. Then each schema was queried with an alternately 1-3 tag query. For example, the first query was ``webservice'', the second was ``webservice+rest'', the third was ``webservice+rest+coding'', the fourth again was just one tag like the first one and so forth. 
+Each query was done with LIMIT 50. All the queries worked and the outcomes were the same on all schemas.
+
+The databased was MySQL 4.0.21 with the configuration described in Table \ref{tb:mysqlconfig}.
+
+\begin{table}[!ht]
+\centering
+\caption{MySQL Configuration}\label{tb:mysqlconfig}
+\begin{tabular}{| l |} \hline
+key\_buffer = 300M \\ \hline
+query\_cache\_size = 30M \\ \hline
+query\_cache\_limit = 30M \\ \hline
+table\_cache = 64 \\ \hline
+ft\_min\_word\_len = 2 \\ \hline
+ft\_stopword\_file = `' \\ \hline
+\end{tabular}
+\end{table}
+
+Detail of the computation system is described in Table \ref{tb:systemconf}.
+
+\begin{table}[!ht]
+\centering
+\caption{System Configuration}\label{tb:systemconf}
+\begin{tabular}{| l | l |} \hline
+CPU & 3GHz Dual Xeon\\ \hline
+Cache & 1MB\\ \hline
+Harddisk & SCSI Ultra 320 Atlas 10K, no RAID\\ \hline
+RAM & 3GB\\ \hline
+\end{tabular}
+\end{table}
+
+\paragraph{Test Results}
+
+The first test was done with a tag set of 250 tags. As we can see from Figure \ref{fg:intersection250}, when  the tag number of items was smaller than 10 thousands, all schemas performed very well. The differences in performance only appeared when the dataset was 1 million or more. When the number of bookmarks was 1 million, MySQLicious was very slow because of the filter instruction \textit{WHERE tag LIKE ``\%tagname\%''}. That was, MySQLicious had to go through the whole dataset to test each item against the queries. Moreover, applying full-text search did not make this solution any faster. On the contrary, Toxi solution was really fast. It was about twice as fast as the Scuttle solution and four times faster than MySQLicious.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.8]{pics/intersection250}
+\caption{Intersection Queries with 250 Tag Set \cite{puiperformance}}\label{fg:intersection250}
+\end{centering}
+\end{figure}
+
+The second test was done with a 999 tag set. Looking at what happened in Figure \ref{fg:intersection999}, MySQLicious with full-text search was the performance leader. It indicated that if we have a system with diverse tag distribution, MySQLicious with full-text search will be the best solution. According to Eachhome research \cite{puiperformance}, if a system has an average tag distribution of 1\% (a tag shows up in 1/100 of all items on an average), Toxi is the best solution. On the other hand, if the system is more uniformly ditributed, MySQLicious performs better.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.8]{pics/intersection999}
+\caption{Intersection Queries with 999 Tag Set \cite{puiperformance}}\label{fg:intersection999}
+\end{centering}
+\end{figure}
+
+Regarding Union queries, MySQLicious was the fastest as we can see in Figure \ref{fg:union250}. Taking advantage of the \textit{LIKE} queries, MySQLicious sought through all the items then harvested the items with one of the given tags. The magic here lay in the \textit{LIMIT} instruction. MySQLicious traversed the items, checked the constraints then stopped after finding enough items as specified in the \textit{LIMIT} instruction. Whereas in other solutions, the database had to join the tags with the items first then searched through the join result, thus increasing a significant amount of time.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.8]{pics/union250}
+\caption{Union Queries with 250 Tag Set \cite{puiperformance}}\label{fg:union250}
+\end{centering}
+\end{figure}
+
+Compared with intersection and union queries, insertion queries are remarkably faster. In Figure \ref{fg:insert250}, the scale of the vertical-axis changed to 0 - 2 millisecond. MySQLicious handled insertion queries very well, its variation of full-text had to create the full-text index and therefore was a little slower. The Scuttle and Toxi solutions are slower because of the creation of the second and the third tables in their schema. However, insertion queries in all schemas were still about 100 times faster than intersection and union ones. Therefore, we should base our schema decisions on intersection and union queries. 
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.8]{pics/insert250}
+\caption{Insertion Queries with 250 Tag Set \cite{puiperformance}}\label{fg:insert250}
+\end{centering}
+\end{figure}
+
+\paragraph{Improving Performance}
+There are four popular ways to improve the performance. First, we can use \textit{Caching}, we can cache the results of the recent queries for some hours or cache the items per tag. Second, we can use both MySQLicious full-text and Toxi solutions at the same time then use the appropriate schema based on the characteristic of the queries. For example, simple union queries will be performed on MySQLicious while intersection queries with common tags on Toxi. Third, we can slice the data to user/tag/item and prebuild some results. Forth, we can use a NoSQL database. However, using a NoSQL database will lead to other requirements which need to be taken care of.
+
+\subsubsection{Conclusion}
+The nature of a Contact application requires consistency on a small dataset (less than 1 million records). Therefore, we choose the Toxi \cite{toxi} solution which has been discussed above. The local database on a mobile client uses SQLite. It processes all user's queries locally then automatically synchronizes with server database when there is an Internet connection. The server uses a MySQL database with a slight change in the schema to store data from all users. Parts of the database schema are shown in Figure \ref{fg:dbtag} and Figure \ref{fg:dbrelationship}.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.55]{pics/dbtag}
+\caption{Tag Schema}\label{fg:dbtag}
+\end{centering}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.65]{pics/dbrelationship}
+\caption{Relationship Schema}\label{fg:dbrelationship}
+\end{centering}
+\end{figure}
+
+\subsection{Synchronization Technique}
+In order to provide an efficient synchronization solution, each Graphy's mobile client maintains a Sync Queue in its local database. When the user creates, updates or deletes a record, the operation will be applied immediately to the local database and that operation will be appended to the Sync Queue. When the mobile client connects to the Internet, Graphy will periodically communicate with the backend server to synchronize its local database. The synchronization process is designed to work as follows:
+
+\begin{enumerate}
+   \item Client sends a GET request to retrieve server's current time.
+   \item Client consecutively performs all operations in its Sync Queue:
+
+     \begin{enumerate}
+       \item If the operation is a creation:
+         \begin{enumerate}
+           \item Client sends a POST request to server with detail of the new \textit{local record} in the request's body.
+           \item Server creates a new \textit{server record} according to the request's body plus a valid id and a date\_created field equal to current time at server.
+           \item Server sends back to client an HTTP 201 CREATED response which contains the \textit{server record}.
+           \item Client updates the \textit{local record's} id and date\_created according to the \textit{server record's} id and date\_created.
+         \end{enumerate}
+         
+       \item If the operation is an update:
+         \begin{enumerate}
+           \item Client sends a PUT request to server with details of the updated \textit{local record} in the request's body.
+           \item Server changes the \textit{server record} according to the request's body then updates the date\_updated field with the current time at server.
+           \item Server sends back to client an HTTP 200 OK response which contains the \textit{server record}.
+           \item Client updates the \textit{local record's} date\_updated according to the \textit{server record's} date\_updated field.
+         \end{enumerate}
+               
+       \item If the operation is a deletion:
+         \begin{enumerate}
+           \item Client sends a DELETE request to server with \textit{local record's} date\_updated field in the request's argument.
+           \item If the \textit{local record's} date\_updated field equals the \textit{server record's} one then server sets the lazy delete flag is\_deleted on the \textit{server record} to TRUE. If the date\_updated fields are not equal then the server does nothing.
+           \item Server sends back to client an HTTP 202 ACCEPTED response.
+         \end{enumerate}         
+     \end{enumerate}
+   \item Client sends GET requests to all endpoints of the API. The GET requests contain a IF-MODIFIED-SINCE header and a IF-UNMODIFIED-SINCE header. The IF-MODIFIED-SINCE header is set equal to the previous sync time of the client, the IF-UNMODIFIED-SINCE header is set equal to the current sync time which we receive in step 1. After that, client updates its database based on the responses received from all requests.
+   \item Client sets its last sync time to the current sync time received in step 1.
+\end{enumerate}
+
+It is worth mentioning that Graphy's synchronization technique also contains a method to resolve conflicts when users use multiple devices simultaneously. 

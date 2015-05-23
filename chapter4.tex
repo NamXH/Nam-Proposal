@@ -1,0 +1,48 @@
+\chapter{Experiment and Evaluation}
+\section{Tags and Relationships}
+To evaluate the effectiveness of Graphy's tags and relationships system, we plan to provide the system prototype to a controlled group of people to use. During the period, we want to measure Graphy based on these core metrics:
+ 
+\begin{itemize}
+	% Auto tags
+	\item Auto-generated Tags Effectiveness $ATE = \frac{ATL}{TV}$
+	
+	where ATL = the number of times a user looks for an auto-generated tag in a contact, TV = total visits of that contact.
+	
+	% Custom tags
+	\item TT: The total number of custom tags created by each person in the group.
+	
+	\item Custom Tags Weight $CTW = \frac{CTF}{TF}$
+	
+	where CTF = the number of custom tag fields in a contact profile, TF = the total number of fields in that contact profile.
+	
+	\item Custom Tags Effectiveness $CTE = \frac{CTL}{TV}$
+	
+	where CTL = the number of times a user looks for a custom tag in a contact, TV = total visits of that contact.
+	
+	% Connections
+	\item TR: The total number of relationships between contacts created by each person in the group.
+	
+	\item Relationships Weight $RW = \frac{RF}{TF}$
+		
+	where RF = the number of relationship fields in a contact profile, TF = the total number of fields in that contact profile.
+	
+	\item Contact Relationship Effectiveness $CRE = \frac{CRL}{TV}$
+	
+	where CRE = the number of times a user looks for a relationship of a contact, TV = total visits of that contact.
+\end{itemize}
+\section{Database Synchronization Performance}
+To evaluate the performance of our synchronization technique, we plan to use Apache Bench and Xamarin to do several load tests on the server such as excuting 1000 requests, processing up to 10 requests concurrently. The results will be measured in milliseconds and compared with other services like Gmail Contacts. 
+
+We will also benchmark the speed and capacity of the mobile SQLite database. In our Graphy system, the SQLite database runs on the mobile devices and communicates with Xamarin - a cross-platforms development environment. Therefore, the performance of the database can be lower than using a native development environment.
+
+%However, due to the limitation of time and resources, we have not been able to cover all metrics listed above and the user data collected was small. On the collected data, there are some promising results in Custom Tags Weight and Relationship Weight which are shown in Table \ref{tb:experiment}. Although the experiment is still small thus not really comprehensive, it represents a common pattern in users' behaviors: The majority of contacts only contain 2 to 3 fields including the person's name, his/her phone numbers, and his/her organization. Therefore, when the users create custom tags or relationships, the weight of these pieces of information are certainly high. Regarding the performance of Graphy, the database design and the synchronization technique perform very well on the basic daily usage.
+%
+%\begin{table}[!ht]
+%\centering
+%\caption{Experiment Results}\label{tb:experiment}
+%\begin{tabular}{| l | l | l | l |} \hline
+%Criteria & Person 1 & Person 2 & Person 3\\ \hline
+%Average CTW & 27.13\% & 22.67\% & 24.84\%\\ \hline
+%Average RW & 13.61\% & 19.33\% & 18.32\%\\ \hline
+%\end{tabular}
+%\end{table}

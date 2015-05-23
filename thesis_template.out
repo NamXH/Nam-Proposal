@@ -1,0 +1,32 @@
+\BOOKMARK [0][-]{Doc-Start}{Permission to Use}{}% 1
+\BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter*.2}{Acknowledgements}{}% 3
+\BOOKMARK [0][-]{chapter*.3}{Contents}{}% 4
+\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 5
+\BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Problem Definition}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{Research Goals}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{Litterature Review and Analysis}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Contact Information and The Need of Tagging}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{Tagging}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{Historical Contexts Awareness}{section.2.1}% 14
+\BOOKMARK [1][-]{section.2.2}{Contact Relationships}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Social Network Sites: Definition and History}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Graphy vs. Social Network Sites}{section.2.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Cloud-based Contacts Application}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.3.1}{Overview of Cloud Computing}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.2}{Utilizing Cloud Computing in Contacts Applications}{section.2.3}% 20
+\BOOKMARK [0][-]{chapter.3}{Design and Implementation}{}% 21
+\BOOKMARK [1][-]{section.3.1}{System Architecture}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Mobile Client}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Backend Server}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Database}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.4.1}{Database Schema Design to Support Tagging}{section.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.4.2}{Synchronization Technique}{section.3.4}% 27
+\BOOKMARK [0][-]{chapter.4}{Experiment and Evaluation}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Tags and Relationships}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Database Synchronization Performance}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{Summary and Future Work}{}% 31
+\BOOKMARK [0][-]{chapter.5}{References}{}% 32
