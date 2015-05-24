@@ -1,8 +1,6 @@
-\chapter{Litterature Review and Analysis}
+\chapter{Literature Review and Analysis}
 % !!!
-In this chapter, we will review the state of the art and the related work that has influenced our approach. At the end of each section/subsection we wrap it up with a short summary or analysis/comparison. First, in section \ref{contactprofile} we look into the design drivers a modern Contacts application should follow. Then we go deeper into investigating how to apply these design drivers using tags and historical context awareness in subsection \ref{section:Tagging} and \ref{section:Context_Awareness}. Subsection \ref{section:Tagging} reviews users motivations and the use of tags in different existing systems, the implications for designing a tagging system in general, and how tags should be applied on mobile devices. Subsection \ref{section:Context_Awareness} studies the design principles of context-aware systems then comprehensively examnines Forget-me-not, a context aware prototype of a memory aid device. Second, in section \ref{contactrelationships} we look into various modern social network sites then define and compare our ``reversed social network'' with them. In section \ref{cloudcontact}, we discuss the fundamentals of cloud computing and the benefits of utilizing cloud computing in Contacts applications.
-
-Second, we investigate contact relationships in popular social networks in section \ref{contactrelationships}. In section \ref{cloudcontact}, we discuss the cloud-based Contacts application and its potential. Lastly, we examine 3 database schemas which are designed for a tagging system in section \ref{databasedesign}
+In this chapter, we review the state of the art and the related work that has influenced our approach. At the end of each section/subsection we wrap it up with a short summary or analysis/comparison. First, in section \ref{contactprofile} we look into the design drivers a modern Contacts application should follow. Then we go deeper into investigating how to apply these design drivers using tags and historical context awareness in subsection \ref{section:Tagging} and \ref{section:Context_Awareness}. Subsection \ref{section:Tagging} reviews users motivations and the use of tags in different existing systems, the implications for designing a tagging system in general, and how tags should be applied on mobile devices. Subsection \ref{section:Context_Awareness} studies the design principles of context-aware systems then comprehensively examnines Forget-me-not, a context aware prototype of a memory aid device. Second, in section \ref{contactrelationships} we look into various modern social network sites then define and compare our ``reversed social network'' with them. In section \ref{cloudcontact}, we discuss the fundamentals of cloud computing and the benefits of utilizing cloud computing in Contacts applications. Finally section \ref{section:literature_summary} summarizes all the aspects we have reviewed.
 
 \section{Contact Information and The Need of Tagging}\label{contactprofile}
 Most of our daily communication activities involve managing contacts information. Through a field study from Whittaker et al. \cite{Whittaker2002} the value of contact information is strongly affirmed. Mary, a participant in the field study stated that her personal contacts list was a resource which pervaded all of her work:
@@ -338,7 +336,7 @@ Traditionally, database of a Contacts application lies in separated phones. It m
    \item Integrating phone book contacts with other services
 \end{itemize}
 
-Learning from that, we want our Graphy system to provide the same features. Unfortunately, all of the above services are closed source. Therefore, we have to develop our own communication and synchronization solution which will be discussed carefully in the Implementation section \ref{implementation}. Using cloud computing models and the trending RESTful communication technology, our solution makes it easy for users to work offline through a local database while maintaining a central cloud database to backup and synchronize data to other devices when needed. Our cloud service model and deployment model will be software-as-a-service and community cloud. At the experiment stage, our application is used only by some targeted users but in the future, it is our hope that we can expand it into a public cloud service.
+Learning from that, we want our Graphy system to provide the same features. Unfortunately, all of the above services are closed source. Therefore, we decide to develop our own communication and synchronization solution which will be discussed carefully in the Implementation section \ref{implementation}. Using cloud computing models and the trending RESTful communication technology, our solution makes it easy for users to work offline through a local database while maintaining a central cloud database to backup and synchronize data to other devices when needed. Our cloud service model and deployment model will be software-as-a-service and community cloud. At the experiment stage, our application is used only by some targeted users but in the future, it is our hope that we can expand it into a public cloud service. Furthermore, the cloud server can be used to process long and heavy calculations for future features like relationships suggestion then push the results back to the clients.
 
 %Nonetheless, if a user simultaneously uses more than one service, he/she has to deal with duplicate contact data. To tackle this problem, all popular Contacts applications provide a functionality which will suggest the users similar contact profiles from different services, thus, users can merge/link them to one contact. This functionality currently runs locally on the mobile phone while it could be performed on the cloud servers. There are many more potential tasks which can be done on cloud but still not yet been investigated.
 
@@ -352,3 +350,20 @@ Learning from that, we want our Graphy system to provide the same features. Unfo
 %\caption{LinkedIn Inmaps}\label{fg:inmaps}
 %\end{centering}
 %\end{figure}
+
+\section{Summary}\label{section:literature_summary}
+This chapter investigates numerous aspects of four key areas of our problem: finding contacts by their miscellaneous information, efficiently retaining knowledge of contacts, establishing relationships between contacts then traverse and explore the relationships network, and exchanging data with the cloud.
+
+The summary of the related work that has been reviewed in this chapter is listed in table 
+
+\begin{table}[!ht]
+\centering
+\caption{Summary of literature review}\label{tb:literature_summary}
+\begin{tabular}{| p{6.5cm} | p{9cm} |} \hline
+    Design drivers for a Contacts application & \textbullet Contact management: identifying contacts to support long-term communication \cite{Whittaker2002} \newline \textbullet Why we tag: motivations for annotation in mobile and online media \cite{ames2007we} \\ \hline
+abc & api\newline rest \newline research \\ \hline
+abc & coding\newline .net\\ \hline
+abc & cars\newline wishlist\\ \hline
+\end{tabular}
+\end{table}
+
