@@ -1,6 +1,6 @@
 \chapter{Literature Review and Analysis}
 % !!!
-In this chapter, we review the state of the art and the related work that has influenced our approach. At the end of each section/subsection we wrap it up with a short summary or analysis/comparison. First, in section \ref{contactprofile} we look into the design drivers a modern Contacts application should follow. Then we go deeper into investigating how to apply these design drivers using tags and historical context awareness in subsection \ref{section:Tagging} and \ref{section:Context_Awareness}. Subsection \ref{section:Tagging} reviews users motivations and the use of tags in different existing systems, the implications for designing a tagging system in general, and how tags should be applied on mobile devices. Subsection \ref{section:Context_Awareness} studies the design principles of context-aware systems then comprehensively examnines Forget-me-not, a context aware prototype of a memory aid device. Second, in section \ref{contactrelationships} we look into various modern social network sites then define and compare our ``reversed social network'' with them. In section \ref{cloudcontact}, we discuss the fundamentals of cloud computing and the benefits of utilizing cloud computing in Contacts applications. Finally section \ref{section:literature_summary} summarizes all the aspects we have reviewed.
+In this chapter, we review the state of the art and the related work that has influenced our approach. At the end of each section/subsection comes a short summary with analysis or comparison. First, section \ref{contactprofile} looks into the design drivers a modern Contacts application should follow. It goes deeper into investigating how to apply these design drivers using tags and historical context awareness in subsection \ref{section:Tagging} and \ref{section:Context_Awareness}. Subsection \ref{section:Tagging} reviews users motivations and the use of tags in different existing systems, the implications for designing a tagging system in general, and how tags should be applied on mobile devices. Subsection \ref{section:Context_Awareness} studies the design principles of context-aware systems then comprehensively examnines Forget-me-not, a context aware prototype of a memory aid device. Second, in section \ref{contactrelationships} we look into various modern social network sites then define and compare our ``reversed social network'' with them. In section \ref{cloudcontact}, we discuss the fundamentals of cloud computing and the benefits of utilizing cloud computing in Contacts applications. Finally section \ref{section:literature_summary} summarizes all the aspects having been reviewed above.
 
 \section{Contact Information and The Need of Tagging}\label{contactprofile}
 Most of our daily communication activities involve managing contacts information. Through a field study from Whittaker et al. \cite{Whittaker2002} the value of contact information is strongly affirmed. Mary, a participant in the field study stated that her personal contacts list was a resource which pervaded all of her work:
@@ -105,14 +105,14 @@ The study also disclosed several solutions which users created manually by thems
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.5]{pics/paper_prototype_1}
-\caption{Nguyen et. al.'s ``Add Tags'' UI on A Paper Prototype \cite{tagging}}\label{fig:paper_prototype_1}
+\caption{Nguyen et. al.'s ``Add Tags'' UI on A Paper Prototype}\label{fig:paper_prototype_1}
 \end{centering}
 \end{figure}
 
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.5]{pics/paper_prototype_2}
-\caption{Nguyen et. al.'s ``Contact Info'' UI on A Paper Prototype\cite{tagging}}\label{fig:paper_prototype_2}
+\caption{Nguyen et. al.'s ``Contact Info'' UI on A Paper Prototype}\label{fig:paper_prototype_2}
 \end{centering}
 \end{figure}
 
@@ -141,7 +141,7 @@ Regardless of what method a system chooses to capture contextual data, logically
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.6]{pics/context_aware_systems}
-\caption{Layered Conceptual Framework for Context-aware Systems \cite{baldauf2007survey}}\label{fig:context_aware_systems}
+\caption{Layered Conceptual Framework for Context-aware Systems}\label{fig:context_aware_systems}
 \end{centering}
 \end{figure}
 
@@ -167,7 +167,7 @@ The first layer is called the ``Sensors'' layer. The term sensors here not only 
     Temperature & Thermometers \\ \hline
     Physical attributes & Biosensors for measuring skin resistance, blood pressure, etc. \\ \hline
     \end{tabular}
-    \caption{Commonly Used Physical Sensor Types \cite{baldauf2007survey}} \label{tb:sensor_types}
+    \caption{Commonly Used Physical Sensor Types} \label{tb:sensor_types}
 \end{table}
 
 The second layer, \textit{Raw data retrieval}, is for retrieving raw contextual data. It utilizes drivers on physical sensors or APIs on virtual and logical sensors. This layer provides abstract functions for the upper layer in order to make it easy for accessing the low-level hardware layer. Furthermore, by abstracting the access interfaces, it is possible to replace the hardware sensors module with another one without changing the upper layer's program. For example, replacing a RFID sensor with a GPS one can be done seamlessly.
@@ -194,7 +194,7 @@ After investigating architecture and design principles of context-aware systems,
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.45]{pics/episodic_device}
-\caption{Using A Prosthetic Episodic Memory Device \cite{lamming1994forget}}\label{fig:episodic_device}
+\caption{Using A Prosthetic Episodic Memory Device}\label{fig:episodic_device}
 \end{centering}
 \end{figure}
 
@@ -207,7 +207,7 @@ Forget-me-not was Lamming et. al.'s first attempt \cite{lamming1994forget} in cr
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.7]{pics/forget_me_not}
-\caption{Forget-me-not Implemented on The ParcTab Hardware \cite{lamming1994forget}}\label{fig:forget_me_not}
+\caption{Forget-me-not Implemented on The ParcTab Hardware}\label{fig:forget_me_not}
 \end{centering}
 \end{figure}
 
@@ -216,7 +216,7 @@ By accompanying users, the ParcTab accumulated data about different users' activ
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.6]{pics/intimate_computing}
-\caption{Intimate Computing Simple Model \cite{lamming1994forget}}\label{fig:intimate_computing}
+\caption{Intimate Computing Simple Model}\label{fig:intimate_computing}
 \end{centering}
 \end{figure}
 
@@ -253,7 +253,7 @@ Besides user profiles, connections, comments, and private messages, social netwo
 \begin{figure}[p]
 \begin{centering}
 \includegraphics[scale=0.8]{pics/social_network_history}
-\caption{Timeline of the launch dates of various major social network sites and dates when community sites re-launched with social network features \cite{boyd2010social}}\label{fig:social_network_history}
+\caption{Timeline of the launch dates of various major social network sites and dates when community sites re-launched with social network features}\label{fig:social_network_history}
 \end{centering}
 \end{figure}
 
@@ -354,7 +354,9 @@ Learning from that, we want our Graphy system to provide the same features. Unfo
 \section{Summary}\label{section:literature_summary}
 %This chapter investigates numerous aspects of four key areas of our problem: finding contacts by their miscellaneous information, efficiently retaining knowledge of contacts, establishing relationships between contacts then traverse and explore the relationships network, and exchanging data with the cloud.
 
-This chapter investigates numerous aspects of the key areas of our problem. The summary of the related work that has been reviewed in this chapter is listed in table \ref{tb:literature_summary}
+This chapter investigates numerous aspects of the key areas of our problem. The summary of the related work that has been reviewed in this chapter is listed in table \ref{tb:literature_summary}.
+
+From the work having been reviewed, we conclude that modern Contacts applications still need a lot of improvements to help users manage and lookup their contacts better. Three key areas need improvements are: providing custom information to contacts, retaining historical context information, and establishing relationships between contacts. In the next chapter, we briefly describe a prototype of a new Contacts application which addresses these areas by introducing a number of enhancements.
 
 \begin{table}[!ht]
 \centering

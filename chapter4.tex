@@ -4,31 +4,35 @@ To evaluate the effectiveness of Graphy's tags and relationships system, we plan
  
 \begin{itemize}
 	% Auto tags
-	\item Auto-generated Tags Effectiveness $ATE = \frac{ATL}{TV}$
+	%\item Auto-generated Tags Effectiveness $ATE = \frac{ATL}{TV}$
 	
-	where ATL = the number of times a user looks for an auto-generated tag in a contact, TV = total visits of that contact.
+	%where ATL = the number of times a user looks for an auto-generated tag in a contact, TV = total visits of that contact.
 	
 	% Custom tags
-	\item TT: The total number of custom tags created by each person in the group.
+	\item The total number of tags created by each person in the group.
 	
-	\item Custom Tags Weight $CTW = \frac{CTF}{TF}$
+	\item Tags Weight $TW = \frac{TF}{AF}$
 	
-	where CTF = the number of custom tag fields in a contact profile, TF = the total number of fields in that contact profile.
+	where TF (Tag Fields) = the number of tag fields in a contact profile, AF (All Fields) = the total number of all fields in that contact profile.
 	
-	\item Custom Tags Effectiveness $CTE = \frac{CTL}{TV}$
+	\item Tags Effectiveness $TE = \frac{TL}{AL}$
 	
-	where CTL = the number of times a user looks for a custom tag in a contact, TV = total visits of that contact.
+	where TL (Tags Lookups) = the number of times a user looks up for a contact using tags, AL (All Lookups) = total contacts lookups.
 	
 	% Connections
-	\item TR: The total number of relationships between contacts created by each person in the group.
+	\item The total number of relationships between contacts created by each person in the group.
 	
-	\item Relationships Weight $RW = \frac{RF}{TF}$
+	\item Relationships Weight $RW = \frac{RF}{AF}$
 		
-	where RF = the number of relationship fields in a contact profile, TF = the total number of fields in that contact profile.
+	where RF (Relationship Fields) = the number of relationship fields in a contact profile, AF (All Fields) = the total number of all fields in that contact profile.
+
+        \item Contact Relationship Effectiveness $RE = \frac{RL}{AL}$
 	
-	\item Contact Relationship Effectiveness $CRE = \frac{CRL}{TV}$
+	where RL (Relationships Lookups) = the number of times a user looks up for a contact using relationships, AL (All Lookups) = total contacts lookups.
 	
-	where CRE = the number of times a user looks for a relationship of a contact, TV = total visits of that contact.
+	%\item Contact Relationship Effectiveness $CRE = \frac{CRL}{TV}$
+	
+	%where CRE = the number of times a user looks for a relationship of a contact, TV = total visits of that contact.
 \end{itemize}
 \section{Database Synchronization Performance}
 To evaluate the performance of our synchronization technique, we plan to use Apache Bench and Xamarin to do several load tests on the server such as excuting 1000 requests, processing up to 10 requests concurrently. The results will be measured in milliseconds and compared with other services like Gmail Contacts. 

@@ -1,8 +1,8 @@
 \chapter{Design and Implementation}
 \label{implementation}
-Our proposed solution of Graphy was implemented into a working prototype running on iOS 8 devices (iPhone 4S, iPhone 5, iPhone 5S, iPod Touch...) which are backed up by a Linux server. Some of the features had to be left out due to the time constraint in the project schedule. In this section, some important features of Graphy as well as the implementation details of those features are described.
+Our proposed solution of Graphy is implemented into a working prototype running on iOS 8 devices (iPhone 4S, iPhone 5, iPhone 5S, iPod Touch...) which are backed up by a Linux server. Some of the features have to be left out due to the time constraint in the project schedule. In this section, some important features of Graphy as well as the implementation of those features are briefly described.
 \section{System Architecture}
-As shown in Figure \ref{fg:architecture}, the system contains 2 components: the mobile client and the backend server. The mobile client is an application which interacts directly with a user to capture his/her information. The backend server provides synchronization between multiple clients as well as interacts with other cloud services like Gmail, Facebook, LinkedIn...
+As shown in Figure \ref{fg:architecture}, the system contains 2 components: the mobile client and the backend server. The mobile client is an application which interacts directly with a user to capture his/her information. The backend server provides synchronization between multiple clients.
 
 \begin{figure}[!h]
 \begin{centering}
@@ -12,16 +12,16 @@ As shown in Figure \ref{fg:architecture}, the system contains 2 components: the 
 \end{figure}
 
 \section{Mobile Client}
-The mobile client has all normal features from a modern Contact application such as adding/removing contacts, searching for contacts, marking contacts as favorite. Additionally, users can search for contacts based on the tags on the contacts.
+The mobile client has all normal features from a modern Contact application such as adding/removing contacts, searching for contacts, marking contacts as favorite. Additionally, users can search for contacts based on the tags or relationships on the contacts.
 
-\begin{figure}[!h]
+\begin{figure}[!h]\textsl{}
 \begin{centering}
 \includegraphics[scale=0.3]{pics/mainscreen}
 \caption{Main Screen}\label{fg:mainscreen}
 \end{centering}
 \end{figure}
 
-The feature that distinguishes Graphy from other Contacts applications lies on the contact profiles. As we can see from Figure \ref{fg:contactscreen}, a Graphy's contact profile consists of usual information plus the tags and the relationships. In this example, ``Chairman of Microsoft'' is a custom tag added by the user. The custom tags are implemented by 255-character text fields that cover most common use cases, and users can create as many tags as they want. In Graphy's contact profile, a relationship is demonstrated by 3 fields: the name of the relationship, the related person, and an optional detail about the relationship. In Figure \ref{fg:contactscreen}, Bill Henry Gates is the advisor of Satya Nandela. This relationship is shown by the ``=>'' symbol. Conversely, Jennifer Gates is the daughter of Bill Henry Gates so the symbol is reversed to ``<=''. These symbols are not the most attractive way to represent the relationships and we will design a better user interface in later prototypes. It is worth mentioning that the relationships are bi-directional. When the users tap on the relationships field, Graphy will bring them to the other contact. For example, tapping on Satya Nandela will display the full contact profile of Satya in which there is a relationship ``Advisor'' from Bill Henry Gates. Besides, all fields of a relationship are customizable.
+The feature that distinguishes Graphy from other Contacts applications lies on the contact profiles. As we can see from Figure \ref{fg:contactscreen}, a Graphy's contact profile consists of usual information plus the tags and the relationships. In this example, ``Chairman of Microsoft'' is a custom tag added by the user. The custom tags are implemented by 255-character text fields that cover most common use cases, and users can create as many tags as they want. Furthermore, when a new contact is created, the date and the current location are automatically added as tags in the new contact's profile. These are two historical contexts which may help the user recalling information about the new contact when he/she looks it up again in the future. Regarding relationships between contacts, in Graphy's contact profile, a relationship is demonstrated by 3 fields: the name of the relationship, the related person, and an optional detail about the relationship. In Figure \ref{fg:contactscreen}, Bill Henry Gates is the advisor of Satya Nandela. This relationship is shown by the ``=>'' symbol. Conversely, Jennifer Gates is the daughter of Bill Henry Gates so the symbol is reversed to ``<=''. These symbols are not the most attractive way to represent the relationships and we will design a better user interface in later prototypes. It is worth mentioning that the relationships are bi-directional. When the users tap on the relationships field, Graphy will bring them to the other contact. For example, tapping on Satya Nandela will display the full contact profile of Satya in which there is a relationship ``Advisor'' from Bill Henry Gates. Besides, all fields of a relationship are customizable.
 
 \begin{figure}[!h]
 \begin{centering}
@@ -48,7 +48,7 @@ DELETE & /contacts/\{id\} & Delete a contact\\ \hline
 \end{tabular}
 \end{table}
 
-In addition to providing an API, the backend server can also interact with other services like Gmail, LinkedIn, Facebook... Therefore, Graphy can import and export its contacts to third party services as well as captures social information from social networks.
+%In addition to providing an API, the backend server can also interact with other services like Gmail, LinkedIn, Facebook... Therefore, Graphy can import and export its contacts to third party services as well as captures social information from social networks.
 
 \section{Database}
 The databases play an important role in the system of Graphy. Since Graphy operates in both online and offline modes, the local database in a mobile client must contain all user's data. Furthermore, Graphy supports multiple devices concurrently so the databases on clients should synchronize flawlessly and efficiently.
@@ -264,7 +264,7 @@ The first test was done with a tag set of 250 tags. As we can see from Figure \r
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.8]{pics/intersection250}
-\caption{Intersection Queries with 250 Tag Set \cite{puiperformance}}\label{fg:intersection250}
+\caption{Intersection Queries with 250 Tag Set}\label{fg:intersection250}
 \end{centering}
 \end{figure}
 
@@ -273,7 +273,7 @@ The second test was done with a 999 tag set. Looking at what happened in Figure 
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.8]{pics/intersection999}
-\caption{Intersection Queries with 999 Tag Set \cite{puiperformance}}\label{fg:intersection999}
+\caption{Intersection Queries with 999 Tag Set}\label{fg:intersection999}
 \end{centering}
 \end{figure}
 
@@ -282,7 +282,7 @@ Regarding Union queries, MySQLicious was the fastest as we can see in Figure \re
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.8]{pics/union250}
-\caption{Union Queries with 250 Tag Set \cite{puiperformance}}\label{fg:union250}
+\caption{Union Queries with 250 Tag Set}\label{fg:union250}
 \end{centering}
 \end{figure}
 
@@ -291,7 +291,7 @@ Compared with intersection and union queries, insertion queries are remarkably f
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.8]{pics/insert250}
-\caption{Insertion Queries with 250 Tag Set \cite{puiperformance}}\label{fg:insert250}
+\caption{Insertion Queries with 250 Tag Set}\label{fg:insert250}
 \end{centering}
 \end{figure}
 

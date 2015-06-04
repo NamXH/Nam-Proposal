@@ -528,7 +528,7 @@ or \protect\degree{\protect\MSc}}
 \strut\\
 \Large
 \ifx\proposal\undefined
-A Thesis Submitted to the\\
+A Proposal Submitted to the\\
 College of Graduate Studies and Research\\
 in Partial Fulfillment of the Requirements\\
 for the degree of \@degree\\

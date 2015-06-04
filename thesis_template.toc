@@ -1,9 +1,8 @@
 \contentsline {chapter}{Permission to Use}{i}{Doc-Start}
 \contentsline {chapter}{Abstract}{ii}{chapter*.1}
-\contentsline {chapter}{Acknowledgements}{iii}{chapter*.2}
-\contentsline {chapter}{Contents}{iv}{chapter*.3}
-\contentsline {chapter}{List of Tables}{v}{chapter*.3}
-\contentsline {chapter}{List of Figures}{vi}{chapter*.3}
+\contentsline {chapter}{Contents}{iii}{chapter*.2}
+\contentsline {chapter}{List of Tables}{iv}{chapter*.2}
+\contentsline {chapter}{List of Figures}{v}{chapter*.2}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problem Definition}{2}{section.1.2}
@@ -15,18 +14,18 @@
 \contentsline {section}{\numberline {2.2}Contact Relationships}{24}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Social Network Sites: Definition and History}{25}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Graphy vs. Social Network Sites}{26}{subsection.2.2.2}
-\contentsline {subsubsection}{Similarities}{26}{subsubsection*.16}
-\contentsline {subsubsection}{Differences}{26}{subsubsection*.17}
-\contentsline {paragraph}{Reversed Social Network}{26}{paragraph*.18}
-\contentsline {paragraph}{Information Accuracy}{28}{paragraph*.19}
-\contentsline {paragraph}{Relationship}{28}{paragraph*.20}
-\contentsline {paragraph}{Privacy}{29}{paragraph*.21}
-\contentsline {paragraph}{Bridging Online and Offline Social Networks}{29}{paragraph*.22}
+\contentsline {subsubsection}{Similarities}{26}{subsubsection*.15}
+\contentsline {subsubsection}{Differences}{26}{subsubsection*.16}
+\contentsline {paragraph}{Reversed Social Network}{26}{paragraph*.17}
+\contentsline {paragraph}{Information Accuracy}{28}{paragraph*.18}
+\contentsline {paragraph}{Relationship}{28}{paragraph*.19}
+\contentsline {paragraph}{Privacy}{29}{paragraph*.20}
+\contentsline {paragraph}{Bridging Online and Offline Social Networks}{29}{paragraph*.21}
 \contentsline {section}{\numberline {2.3}Cloud-based Contacts Application}{30}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Overview of Cloud Computing}{30}{subsection.2.3.1}
-\contentsline {subsubsection}{Fundamental Characteristics}{30}{subsubsection*.23}
-\contentsline {subsubsection}{Service Models}{30}{subsubsection*.24}
-\contentsline {subsubsection}{Deployment Models}{31}{subsubsection*.25}
+\contentsline {subsubsection}{Fundamental Characteristics}{30}{subsubsection*.22}
+\contentsline {subsubsection}{Service Models}{30}{subsubsection*.23}
+\contentsline {subsubsection}{Deployment Models}{31}{subsubsection*.24}
 \contentsline {subsection}{\numberline {2.3.2}Utilizing Cloud Computing in Contacts Applications}{31}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Summary}{32}{section.2.4}
 \contentsline {chapter}{\numberline {3}Design and Implementation}{34}{chapter.3}
@@ -35,17 +34,20 @@
 \contentsline {section}{\numberline {3.3}Backend Server}{35}{section.3.3}
 \contentsline {section}{\numberline {3.4}Database}{36}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Database Schema Design to Support Tagging}{36}{subsection.3.4.1}
-\contentsline {subsubsection}{MySQLicious Solution}{37}{subsubsection*.31}
-\contentsline {subsubsection}{Scuttle Solution}{39}{subsubsection*.33}
-\contentsline {subsubsection}{Toxi Solution}{41}{subsubsection*.35}
-\contentsline {subsubsection}{Schema Performance Analysis}{43}{subsubsection*.37}
-\contentsline {paragraph}{Test Setups}{43}{paragraph*.38}
-\contentsline {paragraph}{Test Results}{43}{paragraph*.41}
-\contentsline {paragraph}{Improving Performance}{44}{paragraph*.46}
-\contentsline {subsubsection}{Conclusion}{45}{subsubsection*.47}
+\contentsline {subsubsection}{MySQLicious Solution}{37}{subsubsection*.30}
+\contentsline {subsubsection}{Scuttle Solution}{39}{subsubsection*.32}
+\contentsline {subsubsection}{Toxi Solution}{41}{subsubsection*.34}
+\contentsline {subsubsection}{Schema Performance Analysis}{43}{subsubsection*.36}
+\contentsline {paragraph}{Test Setups}{43}{paragraph*.37}
+\contentsline {paragraph}{Test Results}{43}{paragraph*.40}
+\contentsline {paragraph}{Improving Performance}{44}{paragraph*.45}
+\contentsline {subsubsection}{Conclusion}{45}{subsubsection*.46}
 \contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{45}{subsection.3.4.2}
 \contentsline {chapter}{\numberline {4}Experiment and Evaluation}{50}{chapter.4}
 \contentsline {section}{\numberline {4.1}Tags and Relationships}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Database Synchronization Performance}{51}{section.4.2}
-\contentsline {chapter}{\numberline {5}Summary and Future Work}{52}{chapter.5}
-\contentsline {chapter}{References}{53}{chapter.5}
+\contentsline {section}{\numberline {4.2}Database Synchronization Performance}{50}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusion}{52}{chapter.5}
+\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{52}{section.5.1}
+\contentsline {section}{\numberline {5.2}Timeline}{52}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{52}{section.5.3}
+\contentsline {chapter}{References}{54}{section.5.3}
