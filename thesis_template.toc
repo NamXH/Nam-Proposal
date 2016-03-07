@@ -51,8 +51,8 @@
 \contentsline {subsection}{\numberline {4.3.2}Search Pattern}{55}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}General Feedbacks and Discussion}{55}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}Summary}{55}{subsection.4.3.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{59}{section.5.1}
-\contentsline {section}{\numberline {5.2}Timeline}{59}{section.5.2}
-\contentsline {section}{\numberline {5.3}Future Work}{59}{section.5.3}
-\contentsline {chapter}{References}{61}{section.5.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{60}{chapter.5}
+\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{60}{section.5.1}
+\contentsline {section}{\numberline {5.2}Timeline}{60}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{60}{section.5.3}
+\contentsline {chapter}{References}{62}{section.5.3}
