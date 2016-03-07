@@ -1,43 +1,166 @@
-\chapter{Experiment and Evaluation}
-\section{Tags and Relationships}
-To evaluate the effectiveness of Graphy's tags and relationships system, we plan to provide the system prototype to a controlled group of people to use. During the period, we want to measure Graphy based on these core metrics:
- 
-\begin{itemize}
-	% Auto tags
-	%\item Auto-generated Tags Effectiveness $ATE = \frac{ATL}{TV}$
-	
-	%where ATL = the number of times a user looks for an auto-generated tag in a contact, TV = total visits of that contact.
-	
-	% Custom tags
-	\item The total number of tags created by each person in the group.
-	
-	\item Tags Weight $TW = \frac{TF}{AF}$
-	
-	where TF (Tag Fields) = the number of tag fields in a contact profile, AF (All Fields) = the total number of all fields in that contact profile.
-	
-	\item Tags Effectiveness $TE = \frac{TL}{AL}$
-	
-	where TL (Tags Lookups) = the number of times a user looks up for a contact using tags, AL (All Lookups) = total contacts lookups.
-	
-	% Connections
-	\item The total number of relationships between contacts created by each person in the group.
-	
-	\item Relationships Weight $RW = \frac{RF}{AF}$
-		
-	where RF (Relationship Fields) = the number of relationship fields in a contact profile, AF (All Fields) = the total number of all fields in that contact profile.
+\chapter{Experiment and Evaluation - User Study}
+In this chapter, the Graphy prototype is evaluated in a user study. The objective of the study is to evaluate the user acceptance of Graphy to see whether it achieves its three goals: allowing users to find contacts by their miscellaneous information, efficiently retain knowledge of contacts, and enabling users to establish relationships between contacts then traverse the relationships with ease. The chapter contains three sections describing the hypotheses of the study, the detailed experimental setup, and the results.
+\section{Hypotheses}
+The main goal of this user study is to evaluate Graphy's functionalities in real use over a period of time. The evaluation mainly aims at testing the following hypotheses:
+\begin{enumerate}
+  \item Graphy allows users to find contacts by their miscellaneous information. Users often use this functionality.
+  \item Graphy allows users to efficiently retain knowledge of contacts. Users utilize this feature to maintain a considerable amount of information, especially miscellaneous information.
+  \item Graphy allows users to establish relationships between contacts then traverse the relationship network with ease. Users create a lot of relationships and actively traverse the relationships during their usage.
+\end{enumerate}
+\section{Experimental Setup}
+The method of this user study is to recruit people to download the Graphy application to their smart phones after signing a consent form to participate in the study. The participants then use it in an uncontrolled environment for two weeks. The Graphy application records users' activities like creating, editing, and searching for contacts into a list of numbers on a summary screen which is part of the user interface. After using it for two weeks, the users go to the summary screen and copy all the numbers on it to an online form. The summary screen and the online form are illustrated in figures \ref{fig:summary_page}) and \ref{fig:survey_form}).
 
-        \item Contact Relationship Effectiveness $RE = \frac{RL}{AL}$
-	
-	where RL (Relationships Lookups) = the number of times a user looks up for a contact using relationships, AL (All Lookups) = total contacts lookups.
-	
-	%\item Contact Relationship Effectiveness $CRE = \frac{CRL}{TV}$
-	
-	%where CRE = the number of times a user looks for a relationship of a contact, TV = total visits of that contact.
-\end{itemize}
-\section{Database Synchronization Performance}
-To evaluate the performance of our synchronization technique, we plan to use Apache Bench and Xamarin to do several load tests on the server such as excuting 1000 requests, processing up to 10 requests concurrently. The results will be measured in milliseconds and compared with other services like Gmail Contacts. 
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.33]{pics/summary_page.png}
+\caption{Graphy's Summary Page}\label{fig:summary_page}
+\end{centering}
+\end{figure}
 
-We will also benchmark the speed and capacity of the mobile SQLite database. In our Graphy system, the SQLite database runs on the mobile devices and communicates with Xamarin - a cross-platforms development environment. Therefore, the performance of the database can be lower than using a native development environment.
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.6]{pics/survey_form.png}
+\caption{Graphy's Online Form}\label{fig:survey_form}
+\end{centering}
+\end{figure}
+
+To recruit participants, we sent email invitations to our contacts list and also advertised the study on Facebook. As a result, twenty one people installed the application and finished the online form. The form is divided into two categories: one for tags (which represent pieces of miscellaneous information), one for relationships. Each category has two sections: the contact data and the search pattern. The contact data section accumulates information in the users' contacts list. For example, it records the total number of contacts, the total number of tags and relationships created during the study. This section allows us to examine the way participants store their information using Graphy, how they utilize the newly introduced elements in our application. The search pattern section collects data when a participant uses the search function or traverse the relationships network. For example, it tracks the frequency a user searches for contacts using tags, the number of tags used in each search, and how many times the user navigates from one contact to another through the relationship network. This section helps us to understand how people consume the data they store in Graphy: whether they use the newly introduced elements to search or they still use traditional information like first name and last name, whether they use the relationships network to look for a contact, etc.
+\section{Results and Discussion}
+This section presents the results of the study. The section contains four parts. The first part Tags and Relationships \ref{results_tags_relationships} looks into the information participants store in Graphy which includes tags, relationships, and traditional information like names and phone numbers. The second part Search Pattern \ref{results_search} examines how participants consume the data they stored in Graphy through searching and navigating the relationships network. The third part General Feedbacks and Discussion \ref{results_feedbacks} analyzes some general feedbacks we received from the users then discusses the strengths and weaknesses of the study. The last part summarizes what we achieve through this user study.
+\subsection{Tags and Relationships}\label{results_tags_relationships}
+
+% Table generated by Excel2LaTeX from sheet 'Sheet2'
+\begin{table}[htbp]
+  \centering
+  \caption{Total Numbers of Active Contacts, Tags, and Relationships} 
+    \begin{tabular}{rrrrr}
+    \toprule
+    Active Contacts Total & Tags Total & Tags Average & Relationships Total & Relationships Average \\
+    \midrule
+    46    & 180   & 3.913 & 94    & 2.0435 \\
+    72    & 241   & 3.3472 & 146   & 2.0278 \\
+    55    & 127   & 2.3091 & 67    & 1.2182 \\
+    16    & 27    & 1.6875 & 30    & 1.875 \\
+    50    & 101   & 2.02  & 87    & 1.74 \\
+    9     & 22    & 2.4444 & 7     & 0.7778 \\
+    8     & 29    & 3.625 & 12    & 1.5 \\
+    49    & 165   & 3.3673 & 86    & 1.7551 \\
+    20    & 48    & 2.4   & 39    & 1.95 \\
+    18    & 69    & 3.8333 & 34    & 1.8889 \\
+    32    & 68    & 2.125 & 45    & 1.4063 \\
+    29    & 67    & 2.3103 & 33    & 1.1379 \\
+    23    & 60    & 2.6087 & 29    & 1.2609 \\
+    24    & 47    & 1.9583 & 38    & 1.5833 \\
+    30    & 102   & 3.4   & 58    & 1.9333 \\
+    63    & 207   & 3.2857 & 128   & 2.0317 \\
+    8     & 26    & 3.25  & 10    & 1.25 \\
+    52    & 111   & 2.1346 & 80    & 1.5385 \\
+    41    & 85    & 2.0732 & 71    & 1.7317 \\
+    22    & 41    & 1.8636 & 41    & 1.8636 \\
+    17    & 56    & 3.2941 & 31    & 1.8235 \\
+          &       &       &       &  \\
+    \textbf{32.5714} &  \textbf{89.4762} &  \textbf{2.7262} &  \textbf{55.5238} &  \textbf{1.6351} \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.5]{pics/active_contacts.png}
+\caption{Number of Active Contacts}\label{fig:active_contacts}
+\includegraphics[scale=0.5]{pics/tags_total.png}
+\caption{Number of Tags}\label{fig:tags_total}
+\includegraphics[scale=0.5]{pics/relationships_total.png}
+\caption{Number of Relationships}\label{fig:relationships_total}
+\end{centering}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Tag and Relationship Types}
+    \begin{tabular}{rrrrrr}
+    \toprule
+    Tag Total & \specialcell[t]{Tag:\\Type Count} & \specialcell[t]{Tag:\\Total/Type} & Relationship Total & \specialcell[t]{Relationship:\\Type Count} & \specialcell[t]{Relationship:\\Total/Type} \\
+    \midrule
+    180   & 114   & 1.5789 & 94    & 23    & 4.087 \\
+    241   & 106   & 2.2736 & 146   & 36    & 4.0556 \\
+    127   & 126   & 1.0079 & 67    & 36    & 1.8611 \\
+    27    & 27    & 1     & 30    & 14    & 2.1429 \\
+    101   & 91    & 1.1099 & 87    & 11    & 7.9091 \\
+    22    & 29    & 0.7586 & 7     & 4     & 1.75 \\
+    29    & 30    & 0.9667 & 12    & 5     & 2.4 \\
+    165   & 117   & 1.4103 & 86    & 27    & 3.1852 \\
+    48    & 39    & 1.2308 & 39    & 15    & 2.6 \\
+    69    & 52    & 1.3269 & 34    & 10    & 3.4 \\
+    68    & 67    & 1.0149 & 45    & 23    & 1.9565 \\
+    67    & 64    & 1.0469 & 33    & 18    & 1.8333 \\
+    60    & 42    & 1.4286 & 29    & 15    & 1.9333 \\
+    47    & 39    & 1.2051 & 38    & 17    & 2.2353 \\
+    102   & 56    & 1.8214 & 58    & 16    & 3.625 \\
+    207   & 94    & 2.2021 & 128   & 33    & 3.8788 \\
+    26    & 20    & 1.3   & 10    & 5     & 2 \\
+    111   & 104   & 1.0673 & 80    & 20    & 4 \\
+    85    & 78    & 1.0897 & 71    & 10    & 7.1 \\
+    41    & 39    & 1.0513 & 41    & 13    & 3.1538 \\
+    56    & 45    & 1.2444 & 31    & 10    & 3.1 \\
+          &       &       &       &       &  \\
+    \textbf{89.4762} & \textbf{65.6667} & \textbf{1.2922} & \textbf{55.5238} & \textbf{17.1905} & \textbf{3.2479} \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.6]{pics/tag_weight_histogram.png}
+\caption{Average Tag Weight Distribution among Participants}\label{fig:tag_weight_histogram}
+\end{centering}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.6]{pics/average_contact_fields.png}
+\caption{Average Proportion of Fields in A Contact}\label{fig:average_contact_fields}
+\end{centering}
+\end{figure}
+
+%\begin{tabular}{ | l | l | l | l | l | }
+%\hline
+%	Active Contact Total & Tag Total & Tag Average & Relationship Total & Relationship Average \\ \hline
+%	46 & 180 & 3.9129999999999998 & 94 & 2.0434999999999999 \\ \hline
+%	72 & 241 & 3.3472 & 146 & 2.0278 \\ \hline
+%	55 & 127 & 2.3090999999999999 & 67 & 1.2181999999999999 \\ \hline
+%	16 & 27 & 1.6875 & 30 & 1.875 \\ \hline
+%	50 & 101 & 2.02 & 87 & 1.74 \\ \hline
+%	9 & 22 & 2.4443999999999999 & 7 & 0.77780000000000005 \\ \hline
+%	8 & 29 & 3.625 & 12 & 1.5 \\ \hline
+%	49 & 165 & 3.3673000000000002 & 86 & 1.7551000000000001 \\ \hline
+%	20 & 48 & 2.4 & 39 & 1.95 \\ \hline
+%	18 & 69 & 3.8332999999999999 & 34 & 1.8889 \\ \hline
+%	32 & 68 & 2.125 & 45 & 1.4063000000000001 \\ \hline
+%	29 & 67 & 2.3102999999999998 & 33 & 1.1378999999999999 \\ \hline
+%	23 & 60 & 2.6086999999999998 & 29 & 1.2608999999999999 \\ \hline
+%	24 & 47 & 1.9582999999999999 & 38 & 1.5832999999999999 \\ \hline
+%	30 & 102 & 3.4 & 58 & 1.9333 \\ \hline
+%	63 & 207 & 3.2856999999999998 & 128 & 2.0316999999999998 \\ \hline
+%	8 & 26 & 3.25 & 10 & 1.25 \\ \hline
+%	52 & 111 & 2.1345999999999998 & 80 & 1.5385 \\ \hline
+%	41 & 85 & 2.0731999999999999 & 71 & 1.7317 \\ \hline
+%	22 & 41 & 1.8635999999999999 & 41 & 1.8635999999999999 \\ \hline
+%	17 & 56 & 3.2940999999999998 & 31 & 1.8234999999999999 \\ \hline
+%	Average & \  & \  & \  & \  \\ \hline
+%	32.571399999999997 & 89.476200000000006 & 2.7262 & 55.523800000000001 & 1.6351 \\ \hline
+%\end{tabular}
+
+\subsection{Search Pattern}\label{results_search}
+\subsection{General Feedbacks and Discussion}\label{results_feedbacks}
+\subsection{Summary}\label{results_summary}
+
+%\section{Database Synchronization Performance (Will Remove)}
+%To evaluate the performance of our synchronization technique, we plan to use Apache Bench and Xamarin to do several load tests on the server such as excuting 1000 requests, processing up to 10 requests concurrently. The results will be measured in milliseconds and compared with other services like Gmail Contacts. 
+
+%We will also benchmark the speed and capacity of the mobile SQLite database. In our Graphy system, the SQLite database runs on the mobile devices and communicates with Xamarin - a cross-platforms development environment. Therefore, the performance of the database can be lower than using a native development environment.
 
 %However, due to the limitation of time and resources, we have not been able to cover all metrics listed above and the user data collected was small. On the collected data, there are some promising results in Custom Tags Weight and Relationship Weight which are shown in Table \ref{tb:experiment}. Although the experiment is still small thus not really comprehensive, it represents a common pattern in users' behaviors: The majority of contacts only contain 2 to 3 fields including the person's name, his/her phone numbers, and his/her organization. Therefore, when the users create custom tags or relationships, the weight of these pieces of information are certainly high. Regarding the performance of Graphy, the database design and the synchronization technique perform very well on the basic daily usage.
 %

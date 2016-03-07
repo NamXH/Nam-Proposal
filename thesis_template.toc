@@ -43,11 +43,16 @@
 \contentsline {paragraph}{Improving Performance}{44}{paragraph*.45}
 \contentsline {subsubsection}{Conclusion}{45}{subsubsection*.46}
 \contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{45}{subsection.3.4.2}
-\contentsline {chapter}{\numberline {4}Experiment and Evaluation}{50}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tags and Relationships}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Database Synchronization Performance}{50}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclusion}{52}{chapter.5}
-\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{52}{section.5.1}
-\contentsline {section}{\numberline {5.2}Timeline}{52}{section.5.2}
-\contentsline {section}{\numberline {5.3}Future Work}{52}{section.5.3}
-\contentsline {chapter}{References}{54}{section.5.3}
+\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{50}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hypotheses}{50}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experimental Setup}{50}{section.4.2}
+\contentsline {section}{\numberline {4.3}Results and Discussion}{52}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{55}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Search Pattern}{55}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}General Feedbacks and Discussion}{55}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Summary}{55}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{59}{section.5.1}
+\contentsline {section}{\numberline {5.2}Timeline}{59}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{59}{section.5.3}
+\contentsline {chapter}{References}{61}{section.5.3}

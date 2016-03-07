@@ -25,11 +25,16 @@
 \BOOKMARK [1][-]{section.3.4}{Database}{chapter.3}% 25
 \BOOKMARK [2][-]{subsection.3.4.1}{Database Schema Design to Support Tagging}{section.3.4}% 26
 \BOOKMARK [2][-]{subsection.3.4.2}{Synchronization Technique}{section.3.4}% 27
-\BOOKMARK [0][-]{chapter.4}{Experiment and Evaluation}{}% 28
-\BOOKMARK [1][-]{section.4.1}{Tags and Relationships}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{Database Synchronization Performance}{chapter.4}% 30
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 31
-\BOOKMARK [1][-]{section.5.1}{Summary and Expected Contributions}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.2}{Timeline}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.3}{Future Work}{chapter.5}% 34
-\BOOKMARK [0][-]{section.5.3}{References}{}% 35
+\BOOKMARK [0][-]{chapter.4}{Experiment and Evaluation - User Study}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Hypotheses}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Experimental Setup}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.3}{Results and Discussion}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.3.1}{Tags and Relationships}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.2}{Search Pattern}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.3}{General Feedbacks and Discussion}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.4}{Summary}{section.4.3}% 35
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Summary and Expected Contributions}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.2}{Timeline}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.3}{Future Work}{chapter.5}% 39
+\BOOKMARK [0][-]{section.5.3}{References}{}% 40
