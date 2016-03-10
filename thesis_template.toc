@@ -48,11 +48,11 @@
 \contentsline {section}{\numberline {4.2}Experimental Setup}{50}{section.4.2}
 \contentsline {section}{\numberline {4.3}Results and Discussion}{52}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{53}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Search Pattern}{58}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}General Feedbacks and Discussion}{58}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Summary}{58}{subsection.4.3.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{60}{chapter.5}
-\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{60}{section.5.1}
-\contentsline {section}{\numberline {5.2}Timeline}{60}{section.5.2}
-\contentsline {section}{\numberline {5.3}Future Work}{60}{section.5.3}
-\contentsline {chapter}{References}{62}{section.5.3}
+\contentsline {subsection}{\numberline {4.3.2}Search Pattern}{56}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}General Feedbacks and Discussion}{56}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Summary}{56}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Summary and Expected Contributions}{61}{section.5.1}
+\contentsline {section}{\numberline {5.2}Timeline}{61}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{61}{section.5.3}
+\contentsline {chapter}{References}{63}{section.5.3}
