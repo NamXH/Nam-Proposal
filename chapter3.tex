@@ -13,7 +13,7 @@ As shown in Figure \ref{fg:architecture}, the system contains 2 components: the 
 
 \section{Mobile Client}
 \subsection{Technologies}
-The goal of the mobile client is being a fully functional contacts management application. It should provide all nescessary features of a modern Contacts app as well as additional functionalities of Graphy. Moreover, it should run smoothly on popular smart phones. All things considered, we choose to use Xamarin a state-of-the-art technology which make it possible to do iOS and Android development in C\#. The important thing is that Xamarin allows us to re-use and share a significant amount of code across the two device platforms. Compared with other cross-platform technologies like Sencha or Phonegap, Xamarin have many advantages namely:
+The goal of the mobile client is being a fully functional contacts management application. It should provide all nescessary features of a modern Contacts app as well as additional functionalities of Graphy. Moreover, it should run smoothly on popular smart phones. All things considered, we choose to use Xamarin - a state-of-the-art technology which make it possible to do iOS and Android development in C\#. The important thing is that Xamarin allows us to re-use and share a significant amount of code across the two device platforms. Compared with other cross-platform technologies like Sencha or Phonegap, Xamarin have many advantages namely:
 
 \begin{itemize}
 \item Native Performance: Xamarin code is compiled so it can leverage platform-specific hardware acceleration.
@@ -21,7 +21,7 @@ The goal of the mobile client is being a fully functional contacts management ap
 \item Native API Access: Xamarin can access all the functionalities provided by the underlying platform and divice, including platform-specific capabilities.
 \end{itemize}
 
-Additionally, the new Xamarin.Forms technology allows us to use the Model-view-viewmodel architectural pattern and share nearly 100\% code on both platforms. The Model-view-viewmodel pattern is our preferred way of seperating the graphical user interface and the business logic. Its two-way data bindings automatically synchronize data between controls and models which is very suitable for our application. The architectures of Xamarin and the Model-view-viewmodel pattern can be found in \autoref{fg:xamarin} and \autoref{fg:mvvm_pattern}.
+Additionally, the new Xamarin.Forms technology allows us to use the Model-view-viewmodel architectural pattern and share nearly 100\% code on both platforms. The Model-view-viewmodel pattern is our preferred way of separating the graphical user interface and the business logic. Its two-way data bindings automatically synchronize data between controls and models which is very suitable for our application. The architectures of Xamarin and the Model-view-viewmodel pattern can be found in \autoref{fg:xamarin} and \autoref{fg:mvvm_pattern}.
 
 \begin{figure}[!h]
 \begin{centering}
@@ -40,7 +40,7 @@ Additionally, the new Xamarin.Forms technology allows us to use the Model-view-v
 \end{figure}
 
 \subsection{Features}
-The mobile client has all normal features from a modern Contact application such as adding/removing contacts, searching for contacts, marking contacts as favorite. Additionally, users can search for contacts based on the tags or relationships on the contacts.
+The mobile client has all normal features from a modern contacts management application such as adding/editting/removing contacts, searching for contacts, marking contacts as favorite. Additionally, to make the transition from users' old Contacts application to Graphy effortless, we import all contacts in their phone to Graphy the first time they run our app.
 
 \begin{figure}[!h]\textsl{}
 \begin{centering}
@@ -49,7 +49,7 @@ The mobile client has all normal features from a modern Contact application such
 \end{centering}
 \end{figure}
 
-The feature that distinguishes Graphy from other Contacts applications lies on the contact profiles. As we can see from Figure \ref{fg:contactscreen}, a Graphy's contact profile consists of usual information plus the tags and the relationships. In this example, ``Chairman of Microsoft'' is a custom tag added by the user. The custom tags are implemented by 255-character text fields that cover most common use cases, and users can create as many tags as they want. Furthermore, when a new contact is created, the date and the current location are automatically added as tags in the new contact's profile. These are two historical contexts which may help the user recalling information about the new contact when he/she looks it up again in the future. Regarding relationships between contacts, in Graphy's contact profile, a relationship is demonstrated by 3 fields: the name of the relationship, the related person, and an optional detail about the relationship. In Figure \ref{fg:contactscreen}, Bill Henry Gates is the advisor of Satya Nandela. This relationship is shown by the ``=>'' symbol. Conversely, Jennifer Gates is the daughter of Bill Henry Gates so the symbol is reversed to ``<=''. These symbols are not the most attractive way to represent the relationships and we will design a better user interface in later prototypes. It is worth mentioning that the relationships are bi-directional. When the users tap on the relationships field, Graphy will bring them to the other contact. For example, tapping on Satya Nandela will display the full contact profile of Satya in which there is a relationship ``Advisor'' from Bill Henry Gates. Besides, all fields of a relationship are customizable.
+More importantly, the feature that distinguishes Graphy from other Contacts applications lies on the contact profiles. As we can see from Figure \ref{fg:contactscreen}, a Graphy's contact profile consists of usual information plus the tags and the relationships. In this example, ``Chairman of Microsoft'' is a custom tag added by the user. The custom tags are implemented by 255-character text fields that cover most common use cases, and users can create as many tags as they want. Furthermore, when a new contact is created, the date and the current location are automatically added as tags in the new contact's profile. These are two historical contexts which may help the user recalling information about the new contact when he/she looks it up again in the future. In later versions, we will add more meaningful historical context tags to assist users better. Regarding relationships between contacts, in Graphy's contact profile, a relationship is demonstrated by 3 fields: the name of the relationship, the related person, and an optional detail about the relationship. In Figure \ref{fg:contactscreen}, Bill Henry Gates is the advisor of Satya Nandela. This relationship is shown by the ``=>'' symbol. Conversely, Jennifer Gates is the daughter of Bill Henry Gates so the symbol is reversed to ``<=''. These symbols are not the most attractive way to represent the relationships and we will design a better user interface in later prototypes. It is worth mentioning that the relationships are bi-directional. When the users tap on the relationships field, Graphy will bring them to the other contact. For example, tapping on Satya Nandela will display the full contact profile of Satya in which there is a relationship ``Advisor'' from Bill Henry Gates. Users can tap infinitely to navigate and explore their relationship networks. Besides, all fields of a relationship are customizable.
 
 \begin{figure}[!h]
 \begin{centering}
@@ -58,7 +58,16 @@ The feature that distinguishes Graphy from other Contacts applications lies on t
 \end{centering}
 \end{figure}
 
-A mobile client is fully functional in the offline mode thanks to the implementation of a local database which will be discussed later. When the client connects to the backend server it can synchronize its local database with the server's one. This design provides users with the ability to use multiple devices concurrently.
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.3]{pics/graphy_auto_tag.png}
+\caption{Historical Context Tags}\label{fg:/graphy_auto_tag}
+\end{centering}
+\end{figure}
+
+In addition to the new elements in the contact profiles, we also introduces new ingredients to the search function of the mobile client. Graphy is not only capable of searching for contacts via traditional information like names, organizations but it also supports searching by tags and relationships. Users can enter keywords to Graphy's search boxes then the application will look for that pieces of information in traditional fields, tags, and relationships of all the contacts. Likewise, users can utilize the ``relationships tapping'' feature to jump between contacts and find the people they are looking for. 
+
+The mobile client is fully functional in the offline mode thanks to the implementation of a local SQLite database. When the client connects to the backend server it can synchronize its local database with the server. This design provides the users with the ability to use multiple devices concurrently.
 
 \section{Backend Server}
 The backend server is built using Python and Django framework. It synchronizes the mobile clients via exposing a RESTful API. The mobile clients use appropriate HTTP requests to communicate with the server as the example in Table \ref{tb:restapi}.

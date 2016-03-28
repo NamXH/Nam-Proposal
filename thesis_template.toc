@@ -33,29 +33,29 @@
 \contentsline {section}{\numberline {3.2}Mobile Client}{34}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Technologies}{34}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Features}{35}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Backend Server}{37}{section.3.3}
-\contentsline {section}{\numberline {3.4}Database}{37}{section.3.4}
+\contentsline {section}{\numberline {3.3}Backend Server}{38}{section.3.3}
+\contentsline {section}{\numberline {3.4}Database}{38}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Database Schema Design to Support Tagging}{38}{subsection.3.4.1}
-\contentsline {subsubsection}{MySQLicious Solution}{39}{subsubsection*.32}
-\contentsline {subsubsection}{Scuttle Solution}{40}{subsubsection*.34}
-\contentsline {subsubsection}{Toxi Solution}{42}{subsubsection*.36}
-\contentsline {subsubsection}{Schema Performance Analysis}{44}{subsubsection*.38}
-\contentsline {paragraph}{Test Setups}{44}{paragraph*.39}
-\contentsline {paragraph}{Test Results}{44}{paragraph*.42}
-\contentsline {paragraph}{Improving Performance}{46}{paragraph*.47}
-\contentsline {subsubsection}{Conclusion}{46}{subsubsection*.48}
+\contentsline {subsubsection}{MySQLicious Solution}{40}{subsubsection*.33}
+\contentsline {subsubsection}{Scuttle Solution}{41}{subsubsection*.35}
+\contentsline {subsubsection}{Toxi Solution}{43}{subsubsection*.37}
+\contentsline {subsubsection}{Schema Performance Analysis}{45}{subsubsection*.39}
+\contentsline {paragraph}{Test Setups}{45}{paragraph*.40}
+\contentsline {paragraph}{Test Results}{45}{paragraph*.43}
+\contentsline {paragraph}{Improving Performance}{47}{paragraph*.48}
+\contentsline {subsubsection}{Conclusion}{47}{subsubsection*.49}
 \contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{47}{subsection.3.4.2}
-\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{51}{chapter.4}
-\contentsline {section}{\numberline {4.1}Hypotheses}{51}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experimental Setup}{51}{section.4.2}
-\contentsline {section}{\numberline {4.3}Results and Discussions}{53}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{54}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{59}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Summary}{63}{section.4.4}
-\contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{66}{chapter.5}
-\contentsline {section}{\numberline {5.1}Abc}{66}{section.5.1}
-\contentsline {chapter}{\numberline {6}Conclusion}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{67}{section.6.1}
-\contentsline {section}{\numberline {6.2}Timeline}{67}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{67}{section.6.3}
-\contentsline {chapter}{References}{69}{section.6.3}
+\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{52}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hypotheses}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experimental Setup}{52}{section.4.2}
+\contentsline {section}{\numberline {4.3}Results and Discussions}{54}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{55}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{60}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Summary}{64}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{67}{chapter.5}
+\contentsline {section}{\numberline {5.1}Abc}{67}{section.5.1}
+\contentsline {chapter}{\numberline {6}Conclusion}{68}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{68}{section.6.1}
+\contentsline {section}{\numberline {6.2}Timeline}{68}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{68}{section.6.3}
+\contentsline {chapter}{References}{70}{section.6.3}
