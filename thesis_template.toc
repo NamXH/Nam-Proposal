@@ -31,29 +31,31 @@
 \contentsline {chapter}{\numberline {3}Design and Implementation}{34}{chapter.3}
 \contentsline {section}{\numberline {3.1}System Architecture}{34}{section.3.1}
 \contentsline {section}{\numberline {3.2}Mobile Client}{34}{section.3.2}
-\contentsline {section}{\numberline {3.3}Backend Server}{35}{section.3.3}
-\contentsline {section}{\numberline {3.4}Database}{36}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Database Schema Design to Support Tagging}{36}{subsection.3.4.1}
-\contentsline {subsubsection}{MySQLicious Solution}{37}{subsubsection*.30}
-\contentsline {subsubsection}{Scuttle Solution}{39}{subsubsection*.32}
-\contentsline {subsubsection}{Toxi Solution}{41}{subsubsection*.34}
-\contentsline {subsubsection}{Schema Performance Analysis}{43}{subsubsection*.36}
-\contentsline {paragraph}{Test Setups}{43}{paragraph*.37}
-\contentsline {paragraph}{Test Results}{43}{paragraph*.40}
-\contentsline {paragraph}{Improving Performance}{44}{paragraph*.45}
-\contentsline {subsubsection}{Conclusion}{45}{subsubsection*.46}
-\contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{45}{subsection.3.4.2}
-\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{50}{chapter.4}
-\contentsline {section}{\numberline {4.1}Hypotheses}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experimental Setup}{50}{section.4.2}
-\contentsline {section}{\numberline {4.3}Results and Discussions}{52}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{53}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{58}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Summary}{62}{section.4.4}
-\contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{65}{chapter.5}
-\contentsline {section}{\numberline {5.1}Abc}{65}{section.5.1}
-\contentsline {chapter}{\numberline {6}Conclusion}{66}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{66}{section.6.1}
-\contentsline {section}{\numberline {6.2}Timeline}{66}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{66}{section.6.3}
-\contentsline {chapter}{References}{68}{section.6.3}
+\contentsline {subsection}{\numberline {3.2.1}Technologies}{34}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Features}{35}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Backend Server}{37}{section.3.3}
+\contentsline {section}{\numberline {3.4}Database}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Database Schema Design to Support Tagging}{38}{subsection.3.4.1}
+\contentsline {subsubsection}{MySQLicious Solution}{39}{subsubsection*.32}
+\contentsline {subsubsection}{Scuttle Solution}{40}{subsubsection*.34}
+\contentsline {subsubsection}{Toxi Solution}{42}{subsubsection*.36}
+\contentsline {subsubsection}{Schema Performance Analysis}{44}{subsubsection*.38}
+\contentsline {paragraph}{Test Setups}{44}{paragraph*.39}
+\contentsline {paragraph}{Test Results}{44}{paragraph*.42}
+\contentsline {paragraph}{Improving Performance}{46}{paragraph*.47}
+\contentsline {subsubsection}{Conclusion}{46}{subsubsection*.48}
+\contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{47}{subsection.3.4.2}
+\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{51}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hypotheses}{51}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experimental Setup}{51}{section.4.2}
+\contentsline {section}{\numberline {4.3}Results and Discussions}{53}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{54}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{59}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Summary}{63}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{66}{chapter.5}
+\contentsline {section}{\numberline {5.1}Abc}{66}{section.5.1}
+\contentsline {chapter}{\numberline {6}Conclusion}{67}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{67}{section.6.1}
+\contentsline {section}{\numberline {6.2}Timeline}{67}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{67}{section.6.3}
+\contentsline {chapter}{References}{69}{section.6.3}

@@ -13,27 +13,29 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Timeline of the launch dates of various major social network sites and dates when community sites re-launched with social network features\relax }}{27}{figure.caption.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces System Architecture\relax }}{35}{figure.caption.26}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Main Screen\relax }}{36}{figure.caption.27}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Contact Profile\relax }}{37}{figure.caption.28}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Scuttle Schema\relax }}{40}{figure.caption.33}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Toxi Schema\relax }}{41}{figure.caption.35}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Intersection Queries with 250 Tag Set\relax }}{44}{figure.caption.41}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Intersection Queries with 999 Tag Set\relax }}{45}{figure.caption.42}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Union Queries with 250 Tag Set\relax }}{46}{figure.caption.43}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Insertion Queries with 250 Tag Set\relax }}{47}{figure.caption.44}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Tag Schema\relax }}{48}{figure.caption.47}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Relationship Schema\relax }}{49}{figure.caption.48}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Xamarin Architecture\relax }}{36}{figure.caption.27}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Model-view-viewmodel Pattern\relax }}{36}{figure.caption.28}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Main Screen\relax }}{37}{figure.caption.29}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Contact Profile\relax }}{38}{figure.caption.30}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Scuttle Schema\relax }}{41}{figure.caption.35}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Toxi Schema\relax }}{43}{figure.caption.37}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Intersection Queries with 250 Tag Set\relax }}{45}{figure.caption.43}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Intersection Queries with 999 Tag Set\relax }}{46}{figure.caption.44}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Union Queries with 250 Tag Set\relax }}{47}{figure.caption.45}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Insertion Queries with 250 Tag Set\relax }}{48}{figure.caption.46}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Tag Schema\relax }}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Relationship Schema\relax }}{50}{figure.caption.50}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphy's Summary Page\relax }}{51}{figure.caption.49}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Graphy's Online Form\relax }}{52}{figure.caption.50}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Number of Active Contacts\relax }}{55}{figure.caption.52}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Number of Tags\relax }}{55}{figure.caption.52}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Number of Relationships\relax }}{55}{figure.caption.52}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Average Tag Weight Distribution among Participants\relax }}{58}{figure.caption.54}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Average Relationship Weight Distribution among Participants\relax }}{59}{figure.caption.55}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Average Proportion of Fields in A Contact\relax }}{60}{figure.caption.56}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Total Numbers of Searches\relax }}{61}{figure.caption.57}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Average Proportion of Searches\relax }}{62}{figure.caption.58}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Relationship Navigations Distribution among Participants\relax }}{63}{figure.caption.59}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphy's Summary Page\relax }}{52}{figure.caption.51}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Graphy's Online Form\relax }}{53}{figure.caption.52}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Number of Active Contacts\relax }}{56}{figure.caption.54}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Number of Tags\relax }}{56}{figure.caption.54}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Number of Relationships\relax }}{56}{figure.caption.54}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Average Tag Weight Distribution among Participants\relax }}{59}{figure.caption.56}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Average Relationship Weight Distribution among Participants\relax }}{60}{figure.caption.57}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Average Proportion of Fields in A Contact\relax }}{61}{figure.caption.58}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Total Numbers of Searches\relax }}{62}{figure.caption.59}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Average Proportion of Searches\relax }}{63}{figure.caption.60}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Relationship Navigations Distribution among Participants\relax }}{64}{figure.caption.61}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

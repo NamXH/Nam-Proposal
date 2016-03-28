@@ -1,8 +1,8 @@
 \chapter{Design and Implementation}
 \label{implementation}
-Our proposed solution of Graphy is implemented into a working prototype running on iOS 8 devices (iPhone 4S, iPhone 5, iPhone 5S, iPod Touch...) which are backed up by a Linux server. Some of the features have to be left out due to the time constraint in the project schedule. In this section, some important features of Graphy as well as the implementation of those features are briefly described.
+Our proposed solution of Graphy is implemented into a working prototype running on iOS and Android devices which are backed up by a Unix-like server. In this section, some important features of Graphy as well as the implementation of those features are described.
 \section{System Architecture}
-As shown in Figure \ref{fg:architecture}, the system contains 2 components: the mobile client and the backend server. The mobile client is an application which interacts directly with a user to capture his/her information. The backend server provides synchronization between multiple clients.
+As shown in Figure \ref{fg:architecture}, the system contains 2 components: the mobile client and the backend server. The mobile client is an application which interacts directly with a user to capture his/her information. The backend server provides synchronization between multiple clients. Moreover, the backend server can perform additional processing like mining users' data, integrating with other services in the future. The communication between the client and the server is accomplished using the RESTful architecture on top of HTTP/HTTPS protocols.
 
 \begin{figure}[!h]
 \begin{centering}
@@ -12,6 +12,34 @@ As shown in Figure \ref{fg:architecture}, the system contains 2 components: the 
 \end{figure}
 
 \section{Mobile Client}
+\subsection{Technologies}
+The goal of the mobile client is being a fully functional contacts management application. It should provide all nescessary features of a modern Contacts app as well as additional functionalities of Graphy. Moreover, it should run smoothly on popular smart phones. All things considered, we choose to use Xamarin a state-of-the-art technology which make it possible to do iOS and Android development in C\#. The important thing is that Xamarin allows us to re-use and share a significant amount of code across the two device platforms. Compared with other cross-platform technologies like Sencha or Phonegap, Xamarin have many advantages namely:
+
+\begin{itemize}
+\item Native Performance: Xamarin code is compiled so it can leverage platform-specific hardware acceleration.
+\item Native User Interfaces: Xamarin utilizes the standard, native user interface elements so apps have different look-and-feel suitable for each platform.
+\item Native API Access: Xamarin can access all the functionalities provided by the underlying platform and divice, including platform-specific capabilities.
+\end{itemize}
+
+Additionally, the new Xamarin.Forms technology allows us to use the Model-view-viewmodel architectural pattern and share nearly 100\% code on both platforms. The Model-view-viewmodel pattern is our preferred way of seperating the graphical user interface and the business logic. Its two-way data bindings automatically synchronize data between controls and models which is very suitable for our application. The architectures of Xamarin and the Model-view-viewmodel pattern can be found in \autoref{fg:xamarin} and \autoref{fg:mvvm_pattern}.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.55]{pics/xamarin.png}
+\caption{Xamarin Architecture}\label{fg:xamarin}
+\source{www.xamarin.com}
+\end{centering}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.55]{pics/mvvm_pattern.png}
+\caption{Model-view-viewmodel Pattern}\label{fg:mvvm_pattern}
+\source{wikipedia.org}
+\end{centering}
+\end{figure}
+
+\subsection{Features}
 The mobile client has all normal features from a modern Contact application such as adding/removing contacts, searching for contacts, marking contacts as favorite. Additionally, users can search for contacts based on the tags or relationships on the contacts.
 
 \begin{figure}[!h]\textsl{}

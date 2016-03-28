@@ -21,21 +21,23 @@
 \BOOKMARK [0][-]{chapter.3}{Design and Implementation}{}% 21
 \BOOKMARK [1][-]{section.3.1}{System Architecture}{chapter.3}% 22
 \BOOKMARK [1][-]{section.3.2}{Mobile Client}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.3}{Backend Server}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.4}{Database}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.4.1}{Database Schema Design to Support Tagging}{section.3.4}% 26
-\BOOKMARK [2][-]{subsection.3.4.2}{Synchronization Technique}{section.3.4}% 27
-\BOOKMARK [0][-]{chapter.4}{Experiment and Evaluation - User Study}{}% 28
-\BOOKMARK [1][-]{section.4.1}{Hypotheses}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{Experimental Setup}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.3}{Results and Discussions}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.3.1}{Tags and Relationships}{section.4.3}% 32
-\BOOKMARK [2][-]{subsection.4.3.2}{Contacts Search and Relationship Traversal}{section.4.3}% 33
-\BOOKMARK [1][-]{section.4.4}{Summary}{chapter.4}% 34
-\BOOKMARK [0][-]{chapter.5}{Experiment and Evaluation - System Performance}{}% 35
-\BOOKMARK [1][-]{section.5.1}{Abc}{chapter.5}% 36
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 37
-\BOOKMARK [1][-]{section.6.1}{Summary and Expected Contributions}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.2}{Timeline}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.3}{Future Work}{chapter.6}% 40
-\BOOKMARK [0][-]{section.6.3}{References}{}% 41
+\BOOKMARK [2][-]{subsection.3.2.1}{Technologies}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Features}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{Backend Server}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.4}{Database}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.4.1}{Database Schema Design to Support Tagging}{section.3.4}% 28
+\BOOKMARK [2][-]{subsection.3.4.2}{Synchronization Technique}{section.3.4}% 29
+\BOOKMARK [0][-]{chapter.4}{Experiment and Evaluation - User Study}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Hypotheses}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.2}{Experimental Setup}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.3}{Results and Discussions}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.3.1}{Tags and Relationships}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.2}{Contacts Search and Relationship Traversal}{section.4.3}% 35
+\BOOKMARK [1][-]{section.4.4}{Summary}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Experiment and Evaluation - System Performance}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Abc}{chapter.5}% 38
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 39
+\BOOKMARK [1][-]{section.6.1}{Summary and Expected Contributions}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.2}{Timeline}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.3}{Future Work}{chapter.6}% 42
+\BOOKMARK [0][-]{section.6.3}{References}{}% 43
