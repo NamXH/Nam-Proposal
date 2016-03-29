@@ -70,7 +70,7 @@ In addition to the new elements in the contact profiles, we also introduces new 
 The mobile client is fully functional in the offline mode thanks to the implementation of a local SQLite database. When the client connects to the backend server it can synchronize its local database with the server. This design provides the users with the ability to use multiple devices concurrently.
 
 \section{Backend Server}
-The backend server is built using Python and Django framework. It synchronizes the mobile clients via exposing a RESTful API. The mobile clients use appropriate HTTP requests to communicate with the server as the example in Table \ref{tb:restapi}.
+The goals of the backend server are providing a synchronization service for users on multiple devices, and being a foundation infrastructure for future calculation tasks. One important requirement for the backend server is that it should communicate with the mobile clients through a common and simple protocol. Given these points, we choose HTTP as the protocol, Python as the programing language, Django as the web framework. The Hypertext Transfer Protocol or HTTP is an application protocol for distributed, collaborative, hypermedia information systems \cite{leach1999hypertext}. It is widely used and is the foundation of the World Wide Web's data communication. HTTP operates as a request-response protocol in the client-server computing model. Coupled with HTTP, the Representational state transfer or REST is a state-of-the-art architectural style for designing networked applications. REST can use HTTP for all of its operations. It is a lightweight alternative to Remote Procedure Call and other webservices. In spite of its simplicity, REST is very robust and there is basically nothing we can do in a webservice that cannot be done with REST. Therefore, using REST with the HTTP protocol becomes an excellent choice for our system's communication. Table \ref{tb:restapi} illustrates some example requests of the RESTful API which are exposed by the server. On the other hand, Python is our language of choice since we are familiar with it and it is a powerful, general-purpose programing language. Moreover, the Django web framework, which is written in Python, is an extremely popular open-source framework. It encourages rapid development and clean, pragmatic design while also being fast, secure, and scalable. Django helps us taking care of many aspects in building a RESTful API so we can focusing on the logic of the system. As regards the server, we decide to use a Unix-like local system to run the Gunicorn HTTP server which in turn hosts the Django framework. We prefer this solution instead of using a platform-as-a-service cloud system like Google App Engine or Microsoft Azure because we will have full control of the server and we can avoid some unnecessary cost during the development phase. Later we can rent a server instance from a infrastructure-as-a-service provider like Amazon EC2 to host our system on cloud.
 
 \begin{table}[!ht]
 \centering
@@ -85,15 +85,13 @@ DELETE & /contacts/\{id\} & Delete a contact\\ \hline
 \end{tabular}
 \end{table}
 
-%In addition to providing an API, the backend server can also interact with other services like Gmail, LinkedIn, Facebook... Therefore, Graphy can import and export its contacts to third party services as well as captures social information from social networks.
-
-\section{Database}
+\section{Database Design and Synchronization}
 The databases play an important role in the system of Graphy. Since Graphy operates in both online and offline modes, the local database in a mobile client must contain all user's data. Furthermore, Graphy supports multiple devices concurrently so the databases on clients should synchronize flawlessly and efficiently.
 
 \subsection{Database Schema Design to Support Tagging}\label{databasedesign}
 The problem of tagging items has been around in industrial products for a while. It was popularized by websites associated with Web 2.0 and is an important feature of many Web 2.0 services. In 2003, Delicious - a social bookmarking website provided a service for its users to add tags to their bookmarks as a way to help find them later \cite{delicious}. Flickr \cite{flickr} also let users tag their photos with custom information, thus constructing flexible and easy metadata that enriched photos' information and made them highly searchable at the same time. Influenced by the success of Flickr and Delicious' popularized concept, many websites like Youtube \cite{youtube}, Gmail \cite{gmail}, StackOverFlow \cite{stackoverflow} also implemented tagging. Furthermore, the widespread microblogging service Twitter \cite{twitter} introduced the hashtags which let its users tag their own ``tweet'' easily by prefixing the tagged words with a hash symbol. The idea became widely popular and as a result Twitter became a powerful search engine for searching trends or news all over the world. Not only online web services used tags, the operating system OS X version 10.9 also provided colorful tagging labels \cite{osxtag} that helps users to tag their own files.
 
-In order to provide a powerful tagging system, we need an appropriate database schema. From the database point of view, the tagging problem can be defined as follow: we want to have a database schema where we can tag an item with as many tags as we want. Later on, we want to run queries to constrain the items to a union or intersection of tags. We also want to exclude\slash minus some tags from the search result \cite{puitag}. There are three popular different solutions with which we will examine as follows:
+In order to provide a powerful tagging system (relationship is considered a special type of tag), we need an appropriate database schema. From the database point of view, the tagging problem can be defined as follow: we want to have a database schema where we can tag an item with as many tags as we want. Later on, we want to run queries to constrain the items to a union or intersection of tags. We also want to exclude\slash minus some tags from the search result \cite{puitag}. There are three popular different solutions with which we will examine as follows:
 
 \subsubsection{MySQLicious Solution}
 MySQLicious is a library which provides automated mirroring/backups of Delicious bookmarks into a MySQL database \cite{mysqlicious}. The schema of MySQLicious has only one table as shown in Table \ref{tb:mysqlicious}
@@ -336,18 +334,18 @@ Compared with intersection and union queries, insertion queries are remarkably f
 There are four popular ways to improve the performance. First, we can use \textit{Caching}, we can cache the results of the recent queries for some hours or cache the items per tag. Second, we can use both MySQLicious full-text and Toxi solutions at the same time then use the appropriate schema based on the characteristic of the queries. For example, simple union queries will be performed on MySQLicious while intersection queries with common tags on Toxi. Third, we can slice the data to user/tag/item and prebuild some results. Forth, we can use a NoSQL database. However, using a NoSQL database will lead to other requirements which need to be taken care of.
 
 \subsubsection{Conclusion}
-The nature of a Contact application requires consistency on a small dataset (less than 1 million records). Therefore, we choose the Toxi \cite{toxi} solution which has been discussed above. The local database on a mobile client uses SQLite. It processes all user's queries locally then automatically synchronizes with server database when there is an Internet connection. The server uses a MySQL database with a slight change in the schema to store data from all users. Parts of the database schema are shown in Figure \ref{fg:dbtag} and Figure \ref{fg:dbrelationship}.
+The nature of a Contact application requires consistency on a small dataset (less than 1 million records). Therefore, we choose the Toxi \cite{toxi} solution which has been discussed above. The local database on a mobile client uses SQLite. It processes all user's queries locally then automatically synchronizes with server database when there is an Internet connection. The server uses a PostgreSQL database with a slight change in the schema to store data from all users. Parts of the database schema are shown in Figure \ref{fg:dbtag} and Figure \ref{fg:dbrelationship}.
 
 \begin{figure}[!h]
 \begin{centering}
-\includegraphics[scale=0.55]{pics/dbtag}
+\includegraphics[scale=0.5]{pics/dbtag}
 \caption{Tag Schema}\label{fg:dbtag}
 \end{centering}
 \end{figure}
 
 \begin{figure}[!h]
 \begin{centering}
-\includegraphics[scale=0.65]{pics/dbrelationship}
+\includegraphics[scale=0.5]{pics/dbrelationship}
 \caption{Relationship Schema}\label{fg:dbrelationship}
 \end{centering}
 \end{figure}

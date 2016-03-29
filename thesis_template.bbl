@@ -213,6 +213,12 @@ Cliff Lampe, Nicole Ellison, and Charles Steinfield.
 \newblock In {\em Proceedings of the 2006 20th anniversary conference on
   Computer supported cooperative work}, pages 167--170. ACM, 2006.
 
+\bibitem{leach1999hypertext}
+Paul~J Leach, Tim Berners-Lee, Jeffrey~C Mogul, Larry Masinter, Roy~T Fielding,
+  and James Gettys.
+\newblock Hypertext transfer protocol--http/1.1.
+\newblock 1999.
+
 \bibitem{marlow2006ht06}
 Cameron Marlow, Mor Naaman, Danah Boyd, and Marc Davis.
 \newblock Ht06, tagging paper, taxonomy, flickr, academic article, to read.
