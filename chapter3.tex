@@ -351,12 +351,13 @@ The nature of a Contact application requires consistency on a small dataset (les
 \end{figure}
 
 \subsection{Synchronization Technique}
-In order to provide an efficient synchronization solution, each Graphy's mobile client maintains a Sync Queue in its local database. When the user creates, updates or deletes a record, the operation will be applied immediately to the local database and that operation will be appended to the Sync Queue. When the mobile client connects to the Internet, Graphy will periodically communicate with the backend server to synchronize its local database. The synchronization process is designed to work as follows:
+In order to provide an efficient synchronization solution, each Graphy's mobile client maintains a Sync Queue in its local database. When the user creates, updates or deletes a record, the operation will be applied immediately to the local database and at the same time that operation will be appended to the Sync Queue. When the mobile client has Internet connection, Graphy will periodically communicate with the backend server to sync the current operations in the Sync Queue to the database on server. The synchronization process is designed to work as follows:
 
 \begin{enumerate}
    \item Client sends a GET request to retrieve server's current time.
-   \item Client consecutively performs all operations in its Sync Queue:
+   \item Client sends GET requests to all endpoints of the API. The GET requests contain a IF-MODIFIED-SINCE header and a IF-UNMODIFIED-SINCE header. The IF-MODIFIED-SINCE header is set equal to the previous sync time of the client, the IF-UNMODIFIED-SINCE header is set equal to the current sync time which we receive in step 1. After that, client updates its database based on the responses received from all requests.
 
+   \item Client consecutively performs all operations in its Sync Queue:
      \begin{enumerate}
        \item If the operation is a creation:
          \begin{enumerate}
@@ -381,7 +382,7 @@ In order to provide an efficient synchronization solution, each Graphy's mobile 
            \item Server sends back to client an HTTP 202 ACCEPTED response.
          \end{enumerate}         
      \end{enumerate}
-   \item Client sends GET requests to all endpoints of the API. The GET requests contain a IF-MODIFIED-SINCE header and a IF-UNMODIFIED-SINCE header. The IF-MODIFIED-SINCE header is set equal to the previous sync time of the client, the IF-UNMODIFIED-SINCE header is set equal to the current sync time which we receive in step 1. After that, client updates its database based on the responses received from all requests.
+
    \item Client sets its last sync time to the current sync time received in step 1.
 \end{enumerate}
 
