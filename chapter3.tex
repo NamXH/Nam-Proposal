@@ -351,39 +351,67 @@ The nature of a Contact application requires consistency on a small dataset (les
 \end{figure}
 
 \subsection{Synchronization Technique}
-In order to provide an efficient synchronization solution, each Graphy's mobile client maintains a Sync Queue in its local database. When the user creates, updates or deletes a record, the operation will be applied immediately to the local database and at the same time that operation will be appended to the Sync Queue. When the mobile client has Internet connection, Graphy will periodically communicate with the backend server to sync the current operations in the Sync Queue to the database on server. The synchronization process is designed to work as follows:
+In order to provide an efficient synchronization solution, each Graphy's mobile client maintains a Sync Queue in its local database. When the user creates, updates or deletes a record, the operation will be applied immediately to the local database and at the same time that operation will also be appended to the Sync Queue. When the mobile client has Internet connection, Graphy will periodically communicate with the backend server to sync the current operations in the Sync Queue to the database on server. Since our work is not focusing on designing a synchronization algorithm, we make an assumption that the mobile clients and the backend server are always having the same clock. Obviously, the clock synchronization process can be done by applying a well-known method such as Network Time Protocol, TLSDate, or using versions.
+
+The synchronization process is briefly described as follows:
+
+% Old algorithm!!
+%\begin{enumerate}
+%   \item Client sends GET requests to all endpoints of the API. The GET requests contain a IF-MODIFIED-SINCE header and a IF-UNMODIFIED-SINCE header. The IF-MODIFIED-SINCE header is set equal to the previous sync time of the client, the IF-UNMODIFIED-SINCE header is set equal to the current sync time which we receive in step 1. After that, client updates its database and sync queue based on the responses received from all requests.
+%
+%   \item Client consecutively performs all operations in its Sync Queue:
+%     \begin{enumerate}
+%       \item If the operation is a creation:
+%         \begin{enumerate}
+%           \item Client sends a POST request to server with detail of the new \textit{local record} in the request's body.
+%           \item Server creates a new \textit{server record} according to the request's body and a last\_modified field equal to current time at server.
+%           \item Server sends back to client an HTTP 201 CREATED response which contains the \textit{server record}.
+%           \item Client updates the \textit{local record's} last\_modified according to the \textit{server record's}.
+%         \end{enumerate}
+%         
+%       \item If the operation is an update:
+%         \begin{enumerate}
+%           \item Client sends a PUT request to server with details of the updated \textit{local record} in the request's body.
+%           \item Server changes the \textit{server record} according to the request's body then updates the last\_modified field with the current time at server.
+%           \item Server sends back to client an HTTP 200 OK response which contains the \textit{server record}.
+%           \item Client updates the \textit{local record's} last\_modified according to the \textit{server record's} last\_modified field.
+%         \end{enumerate}
+%               
+%       \item If the operation is a deletion:
+%         \begin{enumerate}
+%           \item Client sends a DELETE request to server with \textit{local record's} last\_modified field in the request's argument.
+%           \item If the \textit{local record's} last\_modified field equals the \textit{server record's} one then server sets the lazy delete flag is\_deleted on the \textit{server record} to TRUE. If the last\_modified fields are not equal then the server does nothing.
+%           \item Server sends back to client an HTTP 202 ACCEPTED response.
+%         \end{enumerate}         
+%     \end{enumerate}
+%
+%   \item Client sets its last sync time to the current sync time received in step 1.
+%\end{enumerate}
 
 \begin{enumerate}
-   \item Client sends a GET request to retrieve server's current time.
-   \item Client sends GET requests to all endpoints of the API. The GET requests contain a IF-MODIFIED-SINCE header and a IF-UNMODIFIED-SINCE header. The IF-MODIFIED-SINCE header is set equal to the previous sync time of the client, the IF-UNMODIFIED-SINCE header is set equal to the current sync time which we receive in step 1. After that, client updates its database based on the responses received from all requests.
+   \item Client sends GET requests to all endpoints of the API. The server returns all records of that user. After that, the client examines the server's records, if they have the last\_modified field greater than the client's ones, the client will update its database and Sync Queue according to the information from the server.
 
    \item Client consecutively performs all operations in its Sync Queue:
      \begin{enumerate}
        \item If the operation is a creation:
          \begin{enumerate}
-           \item Client sends a POST request to server with detail of the new \textit{local record} in the request's body.
-           \item Server creates a new \textit{server record} according to the request's body plus a valid id and a date\_created field equal to current time at server.
+           \item Client sends a POST request to the server with detail of the new \textit{client record} in the request's body.
+           \item Server creates a new \textit{server record} according to the request's body. 
            \item Server sends back to client an HTTP 201 CREATED response which contains the \textit{server record}.
-           \item Client updates the \textit{local record's} id and date\_created according to the \textit{server record's} id and date\_created.
          \end{enumerate}
          
        \item If the operation is an update:
          \begin{enumerate}
-           \item Client sends a PUT request to server with details of the updated \textit{local record} in the request's body.
-           \item Server changes the \textit{server record} according to the request's body then updates the date\_updated field with the current time at server.
-           \item Server sends back to client an HTTP 200 OK response which contains the \textit{server record}.
-           \item Client updates the \textit{local record's} date\_updated according to the \textit{server record's} date\_updated field.
+           \item Client sends a PUT request to server with details of the updated \textit{client record} in the request's body.
+           \item Server examines the \textit{client record}. The server will return one of the three HTTP responses: 204 NO CONTENT, 409 CONFLICT, or 410 GONE after comparing the \textit{client record} and the \textit{server record}. 
+           \item Client receives the server response and bases on it to make decision on keeping, updating or deleting the \textit{client record}.
          \end{enumerate}
                
        \item If the operation is a deletion:
          \begin{enumerate}
-           \item Client sends a DELETE request to server with \textit{local record's} date\_updated field in the request's argument.
-           \item If the \textit{local record's} date\_updated field equals the \textit{server record's} one then server sets the lazy delete flag is\_deleted on the \textit{server record} to TRUE. If the date\_updated fields are not equal then the server does nothing.
-           \item Server sends back to client an HTTP 202 ACCEPTED response.
+           \item Client sends a DELETE request to server with the ID of the \textit{client record} and an IF-UNMODIFIED-SINCE header which is set to be equal to the record's last\_modified field.
+           \item Server examines the \textit{client record} and compare it with the \textit{server record}. After that, it will decide to mark the \textit{server record} deleted or not, then return one of the three HTTP responses: 204 NO CONTENT, 409 CONFLICT, or 410 GONE.
+           \item Client receives the server response and bases on it to make decision on keeping or deleting the \textit{client record}. 
          \end{enumerate}         
      \end{enumerate}
-
-   \item Client sets its last sync time to the current sync time received in step 1.
 \end{enumerate}
-
-It is worth mentioning that Graphy's synchronization technique also contains a method to resolve conflicts when users use multiple devices simultaneously. 

@@ -53,9 +53,12 @@
 \contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{61}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Summary}{65}{section.4.4}
 \contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{68}{chapter.5}
-\contentsline {section}{\numberline {5.1}Abc}{68}{section.5.1}
-\contentsline {chapter}{\numberline {6}Conclusion}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{69}{section.6.1}
-\contentsline {section}{\numberline {6.2}Timeline}{69}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{69}{section.6.3}
-\contentsline {chapter}{References}{71}{section.6.3}
+\contentsline {section}{\numberline {5.1}Goals}{68}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experimental Setups}{68}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scenarios and Results}{69}{section.5.3}
+\contentsline {section}{\numberline {5.4}Conclusion}{69}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}Timeline}{71}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{71}{section.6.3}
+\contentsline {chapter}{References}{73}{section.6.3}
