@@ -60,6 +60,11 @@
 \contentsline {subsection}{\numberline {5.2.3}Server}{70}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Communication}{70}{subsection.5.2.4}
 \contentsline {section}{\numberline {5.3}Scenarios and Results}{71}{section.5.3}
+\contentsline {subsubsection}{Scenario 1: Creation}{71}{subsubsection*.66}
+\contentsline {subsubsection}{Scenario 2: Modification}{71}{subsubsection*.67}
+\contentsline {subsubsection}{Scenario 3: Retrieval}{71}{subsubsection*.68}
+\contentsline {subsubsection}{Scenario 4: Synchronization}{71}{subsubsection*.69}
+\contentsline {subsubsection}{Scenario 5: Conflicts Resolution}{71}{subsubsection*.70}
 \contentsline {section}{\numberline {5.4}Conclusion}{71}{section.5.4}
 \contentsline {chapter}{\numberline {6}Conclusion}{73}{chapter.6}
 \contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{73}{section.6.1}

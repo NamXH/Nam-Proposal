@@ -64,32 +64,68 @@ The communication between the clients and the server is achieved using RESTful H
 % This solution just simplifies the implementation without any significant impact on the synchronization process.
 
 \section{Scenarios and Results}
+In order to test whether our system achieves the goals, we run it through different scenarios and evaluate the results. The datasets used in every scenario consist of 200 contacts, each contact has 3 traditional fields: first name, phone number, and email. Additionally, there are also 100 tags attached to 100 contacts, and 100 relationships which connect 100 pairs of contacts. The details of the scenarios will be discussed in the following sections.
+
+\subsubsection{Scenario 1: Creation}
+The first scenario..
+
+\subsubsection{Scenario 2: Modification}
+The second scenario..
+
+\subsubsection{Scenario 3: Retrieval}
+In this scenario..
+
+\subsubsection{Scenario 4: Synchronization}
+abc
+
+\subsubsection{Scenario 5: Conflicts Resolution}
 abc
 
 \begin{table}[!ht]
 \centering
 \caption{abc}\label{tb:abc}
-\begin{tabular}{ | c | c | }
+\begin{tabular}{ | c | c | c |}
 \hline
-	Creation/Modification & Retrieval \\ \hline
-	9.5877 & 4.0301 \\ \hline
-	9.7471 & 4.5846 \\ \hline
-	9.8455 & 5.0286\\ \hline
-	9.4878 & 4.2998\\ \hline
-	9.5682 & 4.6329\\ \hline
-	9.6295& 4.9852\\ \hline
-	10.1144 & 5.0014\\ \hline
-	9.5907 & 4.2031\\ \hline
-	10.4971 & 4.8837\\ \hline
-	9.7939& 4.9016\\ \hline
-        \multicolumn{2}{| l |}{\textit{Average:}} \\ \hline
-        \textbf{9.7861}& \textbf{4.6551}\\ \hline
+	Creation/Modification & Retrieval & Gmail Retrieval \\ \hline
+	9.59 & 4.03 & 18.47 \\ \hline
+	9.75 & 4.58 & 20.77 \\ \hline
+	9.85 & 5.03 & 19.73 \\ \hline
+	9.49 & 4.30 & 17.92 \\ \hline
+	9.57 & 4.63 & 21.81 \\ \hline
+	9.63 & 4.99 & 19.89 \\ \hline
+	10.11 & 5.00 & 18.32 \\ \hline
+	9.59 & 4.21 & 20.59 \\ \hline
+	10.50 & 4.88 & 19.29 \\ \hline
+	9.79 & 4.90 & 20.07 \\ \hline
+        \multicolumn{3}{| l |}{\textit{Average:}} \\ \hline
+        \textbf{9.79}& \textbf{4.66} & \textbf{19.69}\\ \hline
 \end{tabular}
 \end{table}
 
+%\begin{table}[!ht]
+%\centering
+%\caption{abc}\label{tb:abcd}
+%\begin{tabular}{ | c | c | }
+%\hline
+%	Creation/Modification & Retrieval & Gmail Retrieval \\ \hline
+%	9.5877 & 4.0301 & 18.47 \\ \hline
+%	9.7471 & 4.5846 & 20.77 \\ \hline
+%	9.8455 & 5.0286 & 19.73 \\ \hline
+%	9.4878 & 4.2998 & 17.92 \\ \hline
+%	9.5682 & 4.6329 & 21.81 \\ \hline
+%	9.6295& 4.9852 & 19.89 \\ \hline
+%	10.1144 & 5.0014 & 18.32 \\ \hline
+%	9.5907 & 4.2031 & 20.59 \\ \hline
+%	10.4971 & 4.8837 & 19.29 \\ \hline
+%	9.7939& 4.9016 & 20.07 \\ \hline
+%        \multicolumn{2}{| l |}{\textit{Average:}} \\ \hline
+%        \textbf{9.7861}& \textbf{4.6551} & \textbf{19.686}\\ \hline
+%\end{tabular}
+%\end{table}
+
 \begin{figure}[!h]
 \begin{centering}
-\includegraphics[scale=0.4]{pics/system_performance.png}
+\includegraphics[scale=0.45]{pics/system_performance.png}
 \caption{abc}\label{fg:system_performance}
 \end{centering}
 \end{figure}
