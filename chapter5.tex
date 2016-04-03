@@ -64,10 +64,10 @@ The communication between the clients and the server is achieved using RESTful H
 % This solution just simplifies the implementation without any significant impact on the synchronization process.
 
 \section{Scenarios and Results}
-In order to test whether our system achieves the goals, we run it through different scenarios and evaluate the results. The datasets used in every scenario consist of 200 contacts, each contact has 3 traditional fields: first name, phone number, and email. Additionally, there are also 100 tags attached to 100 contacts, and 100 relationships which connect 100 pairs of contacts. The details of the scenarios will be discussed in the following sections.
+In order to test whether our system achieves the goals, we ran it through different scenarios and evaluated the results. The default datasets used in every scenario consisted of 200 contacts, each contact had 3 traditional fields: first name, phone number, and email. Additionally, there were also 100 tags attached to 100 contacts, and 100 relationships which connected 100 pairs of contacts. The details of the scenarios will be discussed in the following sections.
 
 \subsubsection{Scenario 1: Creation}
-The first scenario..
+The first scenario aimed at testing the first goal: \textit{Clients can push contact data to backend server}. Therefore, we created an initial database with the default dataset in the client then started the synchronization process. This scenario tried to simulate the situation when a person uses Graphy for the first time in which he/she imports and creates a few contacts then starts the synchronization process when the Internet connection is available. Each creation or importation in Graphy is associated with a row in the database, then each row has a corresponding POST operation in the Sync Queue. It is important to note that before the first synchronization the users may also modify or delete some of their new entries. As a result, the Sync Queue may contain PUT and DELETE operations. However, in Graphy's algorithm instead of creating new PUT or DELETE operations of a new entry we inspect the actions and just modify the corresponding POST operation so there are only one POST operation for every newly created entry.
 
 \subsubsection{Scenario 2: Modification}
 The second scenario..
