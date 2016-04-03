@@ -69,23 +69,11 @@ In order to test whether our system achieves the goals, we ran it through differ
 \subsubsection{Scenario 1: Creation}
 The first scenario aimed at testing the first goal: \textit{Clients can push contact data to backend server}. Therefore, we created an initial database with the default data set in the client then started the synchronization process. This scenario tried to simulate the situation when a person uses Graphy for the first time in which he/she imports and creates a few contacts then starts the synchronization process when the Internet connection is available. Each creation or importation in Graphy is associated with a row in the database, then each row has a corresponding POST operation in the Sync Queue. It is important to note that before the first synchronization the users may also modify or delete some of their new entries. As a result, the Sync Queue may contain PUT and DELETE operations. However, in Graphy's algorithm instead of creating new PUT or DELETE operations of a new entry we inspect the actions and just modify the corresponding POST operation so there is only one POST operation for every newly created entry. Therefore, the Sync Queue for the initial database consisted of 1000 POST operations which represent all the entries in seven tables: Contacts, Phone Numbers, Emails, Tags, Contact-Tag Maps, Relationship Types, and Relationships. 
 
-After running the scenario, our backend server had the same data as the client which was a success indicator. The results of the scenario are illustrated in \autoref{tb:abc} and \autoref{fg:system_performance}. The results are very promising when the average time to completion of 10 tries is only 9.79 seconds. Particularly, the vast majority of the outcomes are less than 10 seconds. Furthermore, the time to completion will be significantly faster if the scenario is operated in high performance, dedicated servers. In short, the first goal of the system is achieved after examining the first scenario. The speed of the system is also acceptable because this scenario does not happen very often in real life. 
-
-\subsubsection{Scenario 2: Modification}
-The second scenario tried to simulate another situation in real life: a user use Graphy in the offline mode (without Internet connection). While using the application in the offline mode, the user can still perform all the actions normally. The actions are stored in the local database then synchronized with the backend server when the Internet is available. With this in mind, we made various changes to the data of the client in scenario 1 in the offline mode, then we triggered the synchronization process and waited for the data to be uploaded to the backend server. The types of changes we made included: creating new records, updating/deleting current records, and creating new tags and relationships for the existing contacts. Notably, when deleting a record, we had to delete all other related records and their operations in the Sync Queue. For example, when deleting a contact, we had to delete its phone numbers, emails, tags, relationships as well. In total, there were 90 synchronization operations needed to be transfered to the server in this scenario. We tested the scenario for 10 times and the synchronization process happened almost instantly every time (less than 1 second). Therefore, we can conclude that the modification performance is acceptable and strengthens the first goal: \textit{Clients can push contact data to backend server}.
-
-\subsubsection{Scenario 3: Retrieval}
-In this scenario..
-
-\subsubsection{Scenario 4: Synchronization}
-abc
-
-\subsubsection{Scenario 5: Conflicts Resolution}
-abc
+After running the scenario, our backend server had the same data as the client which was a success indicator. The results of the scenario are illustrated in \autoref{tb:ttc} and \autoref{fg:system_performance}. The results are very promising when the average time to completion of 10 tries is only 9.79 seconds. Particularly, the vast majority of the outcomes are less than 10 seconds. Furthermore, the time to completion will be significantly faster if the scenario is operated in high performance, dedicated servers. In short, the first goal of the system is achieved after examining the first scenario. The speed of the system is also acceptable because this scenario does not happen very often in real life.
 
 \begin{table}[!ht]
 \centering
-\caption{abc}\label{tb:abc}
+\caption{Time to Completion of The Scenarios (seconds)}\label{tb:ttc}
 \begin{tabular}{ | c | c | c |}
 \hline
 	Creation/Modification & Retrieval & Gmail Retrieval \\ \hline
@@ -103,6 +91,29 @@ abc
         \textbf{9.79}& \textbf{4.66} & \textbf{19.69}\\ \hline
 \end{tabular}
 \end{table}
+
+\subsubsection{Scenario 2: Modification}
+The second scenario tried to simulate another situation in real life: a user use Graphy in the offline mode (without Internet connection). While using the application in the offline mode, the user can still perform all the actions normally. The actions are stored in the local database then synchronized with the backend server when the Internet is available. With this in mind, we made various changes to the data of the client in scenario 1 in the offline mode, then we triggered the synchronization process and waited for the data to be uploaded to the backend server. The types of changes we made included: creating new records, updating/deleting current records, and creating new tags and relationships for the existing contacts. Notably, when deleting a record, we had to delete all other related records and their operations in the Sync Queue. For example, when deleting a contact, we had to delete its phone numbers, emails, tags, relationships as well. In total, there were 90 synchronization operations needed to be transfered to the server in this scenario. We tested the scenario for 10 times and the synchronization process happened almost instantly every time (less than 1 second). Therefore, we can conclude that the modification performance is acceptable and strengthens the first goal: \textit{Clients can push contact data to backend server}.
+
+\subsubsection{Scenario 3: Retrieval}
+Nowadays, one person may own more than one device. In this scenario, we tried to simulate the case when an user starts using Graphy on another device. The new device has to connect with the server to retrieve existing data of the user to its local database. Consequently, we created an empty database in a new client then triggered the synchronization process so the new client can fetch existing data from the server. The existing data was actually the information uploaded by the first client from scenario 1 and 2. To be specific, the new client sent GET requests to all endpoints of the server's API.Each endpoint corresponded to a table in the server's database. It is important to note that we had to synchronize the table without foreign key first. For instance, the Contacts table was synchronized before the Phone Numbers table because the Phone Numbers table has a foreign key which referred to the primary key of the Contacts table. To sum up, the new client received 1000 entries from the server.
+
+We tested the scenario 10 times and the outcomes are reported in \autoref{tb:ttc} and \autoref{fg:system_performance}. Furthermore, we ran another experiment on the Gmail Contacts service to compare its performance with our system's. The Gmail experiment was set up similarly to scenario 3. First, we created 200 contacts on Gmail then we performed the synchronization process on a new device to fetch these 200 contacts. The device we used was the Apple iPad 4 which has the Apple A6X chipset, Dual-core 1.4 GHz CPU, and 1 GB of RAM. The device operated on a Wifi network which has about 6 Mbps download speed and 1 Mbps upload speed. The Gmail experiment's results are also included in \autoref{tb:ttc} and \autoref{fg:system_performance}. From the table, we can see that the average retrieval time of Graphy is 4.66 while the retrieval time of Gmail is substantially higher at 19.69. The reason for Gmail being slower is it operated on the actual Internet connection instead of on a LAN environment like Graphy. However, as we have discussed previously, our system's hardware is far weaker than Gmail's servers. To conclude, we cannot determine that our system runs faster or slower than Gmail but we can say that it runs at an acceptable speed. Moreover, this scenario does not happen frequently, it only occurs when the user adds a new device or refresh his/her old ones.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.45]{pics/system_performance.png}
+\caption{Time to Completion of The Scenarios}\label{fg:system_performance}
+\end{centering}
+\end{figure}
+
+\subsubsection{Scenario 4: Synchronization}
+abc
+
+\subsubsection{Scenario 5: Conflicts Resolution}
+abc
+
+
 
 %\begin{table}[!ht]
 %\centering
@@ -124,12 +135,5 @@ abc
 %        \textbf{9.7861}& \textbf{4.6551} & \textbf{19.686}\\ \hline
 %\end{tabular}
 %\end{table}
-
-\begin{figure}[!h]
-\begin{centering}
-\includegraphics[scale=0.45]{pics/system_performance.png}
-\caption{abc}\label{fg:system_performance}
-\end{centering}
-\end{figure}
 
 \section{Conclusion}
