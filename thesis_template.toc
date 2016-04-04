@@ -63,7 +63,7 @@
 \contentsline {subsubsection}{Scenario 1: Creation}{71}{subsubsection*.66}
 \contentsline {subsubsection}{Scenario 2: Modification}{71}{subsubsection*.68}
 \contentsline {subsubsection}{Scenario 3: Retrieval}{72}{subsubsection*.69}
-\contentsline {subsubsection}{Scenario 4: Synchronization}{73}{subsubsection*.71}
+\contentsline {subsubsection}{Scenario 4: Synchronization}{74}{subsubsection*.71}
 \contentsline {subsubsection}{Scenario 5: Conflicts Resolution}{74}{subsubsection*.72}
 \contentsline {section}{\numberline {5.4}Conclusion}{74}{section.5.4}
 \contentsline {chapter}{\numberline {6}Conclusion}{75}{chapter.6}
