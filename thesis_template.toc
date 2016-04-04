@@ -66,8 +66,8 @@
 \contentsline {subsubsection}{Scenario 4: Synchronization}{74}{subsubsection*.71}
 \contentsline {subsubsection}{Scenario 5: Conflicts Resolution}{74}{subsubsection*.72}
 \contentsline {section}{\numberline {5.4}Conclusion}{74}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{75}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{75}{section.6.1}
-\contentsline {section}{\numberline {6.2}Timeline}{75}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{75}{section.6.3}
-\contentsline {chapter}{References}{77}{section.6.3}
+\contentsline {chapter}{\numberline {6}Conclusion}{76}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{76}{section.6.1}
+\contentsline {section}{\numberline {6.2}Timeline}{76}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{76}{section.6.3}
+\contentsline {chapter}{References}{78}{section.6.3}
