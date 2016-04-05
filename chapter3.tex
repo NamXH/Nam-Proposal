@@ -1,6 +1,6 @@
 \chapter{Design and Implementation}
 \label{implementation}
-Our proposed solution of Graphy is implemented into a working prototype running on iOS and Android devices which are backed up by a Unix-like server. In this section, some important features of Graphy as well as the implementation of those features are described.
+Our proposed solution of Graphy is implemented to become a working prototype running on iOS and Android devices which are backed up by a Unix-like server. In this section, some important features of Graphy as well as the implementation of those features are described.
 \section{System Architecture}
 As shown in Figure \ref{fg:architecture}, the system contains 2 components: the mobile client and the backend server. The mobile client is an application which interacts directly with a user to capture his/her information. The backend server provides synchronization between multiple clients. Moreover, the backend server can perform additional processing like mining users' data, integrating with other services in the future. The communication between the client and the server is accomplished by the use of the RESTful architecture on top of HTTP/HTTPS protocols.
 
@@ -410,8 +410,8 @@ The synchronization process is briefly described as follows:
        \item If the operation is a deletion:
          \begin{enumerate}
            \item Client sends a DELETE request to server with the ID of the \textit{client record} and an IF-UNMODIFIED-SINCE header which is set to be equal to the record's last\_modified field.
-           \item Server examines the \textit{client record} and compare it with the \textit{server record}. After that, it will decide to mark the \textit{server record} deleted or not, then return one of the three HTTP responses: 204 NO CONTENT, 409 CONFLICT, or 410 GONE.
-           \item Client receives the server response and bases on it to make decision on keeping or deleting the \textit{client record}. 
+           \item Server examines the \textit{client record} and compares it with the \textit{server record}. After that, it will decide to mark the \textit{server record} as deleted or not, then return one of the three HTTP responses: 204 NO CONTENT, 409 CONFLICT, or 410 GONE.
+           \item Client receives the server response and relies on it to make decision on keeping or deleting the \textit{client record}. 
          \end{enumerate}         
      \end{enumerate}
 \end{enumerate}
