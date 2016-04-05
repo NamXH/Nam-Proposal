@@ -49,9 +49,9 @@
 \contentsline {section}{\numberline {4.1}Hypotheses}{53}{section.4.1}
 \contentsline {section}{\numberline {4.2}Experimental Setup}{53}{section.4.2}
 \contentsline {section}{\numberline {4.3}Results and Discussions}{55}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{56}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{61}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Summary}{65}{section.4.4}
+\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{55}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{60}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Summary}{64}{section.4.4}
 \contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{68}{chapter.5}
 \contentsline {section}{\numberline {5.1}Goals}{68}{section.5.1}
 \contentsline {section}{\numberline {5.2}Experimental Setups}{68}{section.5.2}
@@ -67,7 +67,7 @@
 \contentsline {subsubsection}{Scenario 5: Conflicts Resolution}{74}{subsubsection*.72}
 \contentsline {section}{\numberline {5.4}Conclusion}{74}{section.5.4}
 \contentsline {chapter}{\numberline {6}Conclusion}{76}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary and Expected Contributions}{76}{section.6.1}
-\contentsline {section}{\numberline {6.2}Timeline}{76}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{76}{section.6.3}
+\contentsline {section}{\numberline {6.1}Summary}{76}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contributions}{77}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{77}{section.6.3}
 \contentsline {chapter}{References}{78}{section.6.3}
