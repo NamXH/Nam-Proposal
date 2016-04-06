@@ -18,15 +18,15 @@
 \contentsline {subsubsection}{Differences}{28}{subsubsection*.16}
 \contentsline {paragraph}{Personal Social Network}{28}{paragraph*.17}
 \contentsline {paragraph}{Information Accuracy}{28}{paragraph*.18}
-\contentsline {paragraph}{Relationship}{28}{paragraph*.19}
+\contentsline {paragraph}{Relationship}{29}{paragraph*.19}
 \contentsline {paragraph}{Privacy}{29}{paragraph*.20}
-\contentsline {paragraph}{Bridging Online and Offline Social Networks}{29}{paragraph*.21}
+\contentsline {paragraph}{Bridging Online and Offline Social Networks}{30}{paragraph*.21}
 \contentsline {section}{\numberline {2.3}Cloud-based Contacts Application}{30}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Overview of Cloud Computing}{30}{subsection.2.3.1}
 \contentsline {subsubsection}{Fundamental Characteristics}{30}{subsubsection*.22}
-\contentsline {subsubsection}{Service Models}{30}{subsubsection*.23}
+\contentsline {subsubsection}{Service Models}{31}{subsubsection*.23}
 \contentsline {subsubsection}{Deployment Models}{31}{subsubsection*.24}
-\contentsline {subsection}{\numberline {2.3.2}Utilizing Cloud Computing in Contacts Applications}{31}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Utilizing Cloud Computing in Contacts Applications}{32}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Summary}{32}{section.2.4}
 \contentsline {chapter}{\numberline {3}Design and Implementation}{34}{chapter.3}
 \contentsline {section}{\numberline {3.1}System Architecture}{34}{section.3.1}
