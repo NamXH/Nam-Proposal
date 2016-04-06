@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Graphy vs. Social Network Sites}{26}{subsection.2.2.2}
 \contentsline {subsubsection}{Similarities}{26}{subsubsection*.15}
 \contentsline {subsubsection}{Differences}{26}{subsubsection*.16}
-\contentsline {paragraph}{Reversed Social Network}{26}{paragraph*.17}
+\contentsline {paragraph}{Personal Social Network}{26}{paragraph*.17}
 \contentsline {paragraph}{Information Accuracy}{28}{paragraph*.18}
 \contentsline {paragraph}{Relationship}{28}{paragraph*.19}
 \contentsline {paragraph}{Privacy}{29}{paragraph*.20}
@@ -70,4 +70,4 @@
 \contentsline {section}{\numberline {6.1}Summary}{76}{section.6.1}
 \contentsline {section}{\numberline {6.2}Contributions}{77}{section.6.2}
 \contentsline {section}{\numberline {6.3}Future Work}{77}{section.6.3}
-\contentsline {chapter}{References}{78}{section.6.3}
+\contentsline {chapter}{References}{79}{section.6.3}
