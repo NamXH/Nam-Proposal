@@ -73,4 +73,5 @@
 \contentsline {section}{\numberline {6.3}Future Work}{77}{section.6.3}
 \contentsline {chapter}{References}{79}{section.6.3}
 \contentsline {chapter}{\numberline {A}User Study Results}{82}{appendix.A}
-\contentsline {chapter}{\numberline {B}Another Sample Appendix}{85}{appendix.B}
+\contentsline {chapter}{\numberline {B}Database Schema}{85}{appendix.B}
+\contentsline {chapter}{\numberline {C}User Study Online Survey}{87}{appendix.C}
