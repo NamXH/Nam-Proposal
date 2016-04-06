@@ -11,12 +11,12 @@
 \contentsline {section}{\numberline {2.1}Contact Information and The Need of Tagging}{6}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Tagging}{9}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Historical Contexts Awareness}{17}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Contact Relationships}{24}{section.2.2}
+\contentsline {section}{\numberline {2.2}Contact Relationships}{25}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Social Network Sites: Definition and History}{25}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Graphy vs. Social Network Sites}{26}{subsection.2.2.2}
 \contentsline {subsubsection}{Similarities}{26}{subsubsection*.15}
-\contentsline {subsubsection}{Differences}{26}{subsubsection*.16}
-\contentsline {paragraph}{Personal Social Network}{26}{paragraph*.17}
+\contentsline {subsubsection}{Differences}{28}{subsubsection*.16}
+\contentsline {paragraph}{Personal Social Network}{28}{paragraph*.17}
 \contentsline {paragraph}{Information Accuracy}{28}{paragraph*.18}
 \contentsline {paragraph}{Relationship}{28}{paragraph*.19}
 \contentsline {paragraph}{Privacy}{29}{paragraph*.20}
