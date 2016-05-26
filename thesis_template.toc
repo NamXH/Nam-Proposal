@@ -10,67 +10,67 @@
 \contentsline {chapter}{\numberline {2}Literature Review and Analysis}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Contact Information and The Need of Tagging}{6}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Tagging}{9}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Historical Contexts Awareness}{17}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Contact Relationships}{25}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Social Network Sites: Definition and History}{25}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Graphy vs. Social Network Sites}{26}{subsection.2.2.2}
-\contentsline {subsubsection}{Similarities}{26}{subsubsection*.15}
-\contentsline {subsubsection}{Differences}{28}{subsubsection*.16}
-\contentsline {paragraph}{Personal Social Network}{28}{paragraph*.17}
-\contentsline {paragraph}{Information Accuracy}{28}{paragraph*.18}
-\contentsline {paragraph}{Relationship}{29}{paragraph*.19}
-\contentsline {paragraph}{Privacy}{29}{paragraph*.20}
-\contentsline {paragraph}{Bridging Online and Offline Social Networks}{30}{paragraph*.21}
-\contentsline {section}{\numberline {2.3}Cloud-based Contacts Application}{30}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Overview of Cloud Computing}{30}{subsection.2.3.1}
-\contentsline {subsubsection}{Fundamental Characteristics}{30}{subsubsection*.22}
-\contentsline {subsubsection}{Service Models}{31}{subsubsection*.23}
-\contentsline {subsubsection}{Deployment Models}{31}{subsubsection*.24}
-\contentsline {subsection}{\numberline {2.3.2}Utilizing Cloud Computing in Contacts Applications}{32}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Summary}{32}{section.2.4}
-\contentsline {chapter}{\numberline {3}Design and Implementation}{34}{chapter.3}
-\contentsline {section}{\numberline {3.1}System Architecture}{34}{section.3.1}
-\contentsline {section}{\numberline {3.2}Mobile Client}{34}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Technologies}{34}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Features}{35}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Backend Server}{38}{section.3.3}
-\contentsline {section}{\numberline {3.4}Database Design and Synchronization}{39}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Database Schema Design to Support Tagging}{40}{subsection.3.4.1}
-\contentsline {subsubsection}{MySQLicious Solution}{40}{subsubsection*.33}
-\contentsline {subsubsection}{Scuttle Solution}{42}{subsubsection*.35}
-\contentsline {subsubsection}{Toxi Solution}{44}{subsubsection*.37}
-\contentsline {subsubsection}{Schema Performance Analysis}{45}{subsubsection*.39}
-\contentsline {paragraph}{Test Setups}{45}{paragraph*.40}
-\contentsline {paragraph}{Test Results}{46}{paragraph*.43}
-\contentsline {paragraph}{Improving Performance}{47}{paragraph*.48}
-\contentsline {subsubsection}{Conclusion}{47}{subsubsection*.49}
-\contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{48}{subsection.3.4.2}
-\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{53}{chapter.4}
-\contentsline {section}{\numberline {4.1}Hypotheses}{53}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experimental Setup}{53}{section.4.2}
-\contentsline {section}{\numberline {4.3}Results and Discussions}{55}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{55}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{60}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Summary}{64}{section.4.4}
-\contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{68}{chapter.5}
-\contentsline {section}{\numberline {5.1}Goals}{68}{section.5.1}
-\contentsline {section}{\numberline {5.2}Experimental Setups}{68}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Overview}{68}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Clients}{68}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Server}{70}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Communication}{70}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Scenarios and Results}{71}{section.5.3}
-\contentsline {subsubsection}{Scenario 1: Creation}{71}{subsubsection*.66}
-\contentsline {subsubsection}{Scenario 2: Modification}{71}{subsubsection*.68}
-\contentsline {subsubsection}{Scenario 3: Retrieval}{72}{subsubsection*.69}
-\contentsline {subsubsection}{Scenario 4: Synchronization}{74}{subsubsection*.71}
-\contentsline {subsubsection}{Scenario 5: Conflicts Resolution}{74}{subsubsection*.72}
-\contentsline {section}{\numberline {5.4}Conclusion}{74}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{76}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary}{76}{section.6.1}
-\contentsline {section}{\numberline {6.2}Contributions}{77}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{77}{section.6.3}
-\contentsline {chapter}{References}{79}{section.6.3}
-\contentsline {chapter}{\numberline {A}User Study Results}{82}{appendix.A}
-\contentsline {chapter}{\numberline {B}Database Schema}{85}{appendix.B}
-\contentsline {chapter}{\numberline {C}User Study Online Survey}{87}{appendix.C}
+\contentsline {subsection}{\numberline {2.1.2}Historical Contexts Awareness}{16}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Contact Relationships}{22}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Social Network Sites: Definition and History}{22}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Graphy vs. Social Network Sites}{23}{subsection.2.2.2}
+\contentsline {subsubsection}{Similarities}{23}{subsubsection*.9}
+\contentsline {subsubsection}{Differences}{24}{subsubsection*.10}
+\contentsline {paragraph}{Personal Social Network}{24}{paragraph*.11}
+\contentsline {paragraph}{Information Accuracy}{24}{paragraph*.12}
+\contentsline {paragraph}{Relationship}{25}{paragraph*.13}
+\contentsline {paragraph}{Privacy}{25}{paragraph*.14}
+\contentsline {paragraph}{Bridging Online and Offline Social Networks}{25}{paragraph*.15}
+\contentsline {section}{\numberline {2.3}Cloud-based Contacts Application}{26}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Overview of Cloud Computing}{26}{subsection.2.3.1}
+\contentsline {subsubsection}{Fundamental Characteristics}{26}{subsubsection*.16}
+\contentsline {subsubsection}{Service Models}{27}{subsubsection*.17}
+\contentsline {subsubsection}{Deployment Models}{27}{subsubsection*.18}
+\contentsline {subsection}{\numberline {2.3.2}Utilizing Cloud Computing in Contacts Applications}{27}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Summary}{28}{section.2.4}
+\contentsline {chapter}{\numberline {3}Design and Implementation}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}System Architecture}{30}{section.3.1}
+\contentsline {section}{\numberline {3.2}Mobile Client}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Technologies}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Features}{31}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Backend Server}{34}{section.3.3}
+\contentsline {section}{\numberline {3.4}Database Design and Synchronization}{35}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Database Schema Design to Support Tagging}{36}{subsection.3.4.1}
+\contentsline {subsubsection}{MySQLicious Solution}{36}{subsubsection*.27}
+\contentsline {subsubsection}{Scuttle Solution}{38}{subsubsection*.29}
+\contentsline {subsubsection}{Toxi Solution}{40}{subsubsection*.31}
+\contentsline {subsubsection}{Schema Performance Analysis}{41}{subsubsection*.33}
+\contentsline {paragraph}{Test Setups}{41}{paragraph*.34}
+\contentsline {paragraph}{Test Results}{42}{paragraph*.37}
+\contentsline {paragraph}{Improving Performance}{43}{paragraph*.42}
+\contentsline {subsubsection}{Conclusion}{43}{subsubsection*.43}
+\contentsline {subsection}{\numberline {3.4.2}Synchronization Technique}{44}{subsection.3.4.2}
+\contentsline {chapter}{\numberline {4}Experiment and Evaluation - User Study}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hypotheses}{49}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experimental Setup}{49}{section.4.2}
+\contentsline {section}{\numberline {4.3}Results and Discussions}{51}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Tags and Relationships}{51}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Contacts Search and Relationship Traversal}{56}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Summary}{60}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experiment and Evaluation - System Performance}{64}{chapter.5}
+\contentsline {section}{\numberline {5.1}Goals}{64}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experimental Setups}{64}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Overview}{64}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Clients}{64}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Server}{66}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Communication}{66}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Scenarios and Results}{67}{section.5.3}
+\contentsline {subsubsection}{Scenario 1: Creation}{67}{subsubsection*.60}
+\contentsline {subsubsection}{Scenario 2: Modification}{67}{subsubsection*.62}
+\contentsline {subsubsection}{Scenario 3: Retrieval}{68}{subsubsection*.63}
+\contentsline {subsubsection}{Scenario 4: Synchronization}{70}{subsubsection*.65}
+\contentsline {subsubsection}{Scenario 5: Conflicts Resolution}{70}{subsubsection*.66}
+\contentsline {section}{\numberline {5.4}Conclusion}{70}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{72}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary}{72}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contributions}{73}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{73}{section.6.3}
+\contentsline {chapter}{References}{75}{section.6.3}
+\contentsline {chapter}{\numberline {A}User Study Results}{78}{appendix.A}
+\contentsline {chapter}{\numberline {B}Database Schema}{81}{appendix.B}
+\contentsline {chapter}{\numberline {C}User Study Online Survey}{83}{appendix.C}

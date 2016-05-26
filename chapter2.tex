@@ -103,23 +103,23 @@ We have just examined principles of a general tagging system, we will now invest
 
 The study also disclosed several solutions which users created manually by themselves in an attempt to tackle those problems. 7 users used memos or notes to store extra information about their contacts while some others put the information into the name entry of contacts just like the way participants in Whittaker's study did which we have examined in the beginning of section \ref{contactprofile}. From this revelation, Nguyen et. al. concluded that users need an efficient mechanism for storing and retrieving extra information of a contact. Therefore, the researchers proposed the use of tags which were convenient for adding and searching resources. Resources could be classified by numerous tags rather than using a directory or a single branch of hierarchy \cite{millen2005social}. As a result, users could ``tag'' a contact into multiple groups or even made the tags hierarchical based on their needs. Regarding retrieval, multiple tags could be used simultaneously in a query for a specific contact so the users did not have to remember the person/service name.
 
-\begin{figure}[!h]
-\begin{centering}
-\includegraphics[scale=0.5]{pics/paper_prototype_1}
-\caption{Nguyen et. al.'s ``Add Tags'' UI on A Paper Prototype}\label{fig:paper_prototype_1}
-\source{Reprinted from "Users' needs for social tagging and sharing on mobile contacts", by Trung Van Nguyen and Alice Hae Yun Oh, 2010, In Proceedings of the 12th International Conference on Human Computer Interaction with Mobile Devices and Services, MobileHCI '10, pages 387-388.}
-\end{centering}
-\end{figure}
+%\begin{figure}[!h]
+%\begin{centering}
+%\includegraphics[scale=0.5]{pics/paper_prototype_1}
+%\caption{Nguyen et. al.'s ``Add Tags'' UI on A Paper Prototype}\label{fig:paper_prototype_1}
+%\source{Reprinted from "Users' needs for social tagging and sharing on mobile contacts", by Trung Van Nguyen and Alice Hae Yun Oh, 2010, In Proceedings of the 12th International Conference on Human Computer Interaction with Mobile Devices and Services, MobileHCI '10, pages 387-388.}
+%\end{centering}
+%\end{figure}
 
-\begin{figure}[!h]
-\begin{centering}
-\includegraphics[scale=0.5]{pics/paper_prototype_2}
-\caption{Nguyen et. al.'s ``Contact Info'' UI on A Paper Prototype}\label{fig:paper_prototype_2}
-\source{Reprinted from "Users' needs for social tagging and sharing on mobile contacts", by Trung Van Nguyen and Alice Hae Yun Oh, 2010, In Proceedings of the 12th International Conference on Human Computer Interaction with Mobile Devices and Services, MobileHCI '10, pages 387-388.}
-\end{centering}
-\end{figure}
+%\begin{figure}[!h]
+%\begin{centering}
+%\includegraphics[scale=0.5]{pics/paper_prototype_2}
+%\caption{Nguyen et. al.'s ``Contact Info'' UI on A Paper Prototype}\label{fig:paper_prototype_2}
+%\source{Reprinted from "Users' needs for social tagging and sharing on mobile contacts", by Trung Van Nguyen and Alice Hae Yun Oh, 2010, In Proceedings of the 12th International Conference on Human Computer Interaction with Mobile Devices and Services, MobileHCI '10, pages 387-388.}
+%\end{centering}
+%\end{figure}
 
-After conducting the survey, Nguyen et. al. created a paper prototype of a mobile phone Contacts application to verify their findings. The paper prototype was used in various user study scenarios. At the start of each scenario, the researchers explained to the users new features in the Contacts application. After that participants were requested to perform tasks by interacting with the paper prototype. A researcher acted as the application by responding to users' interactions with other user interfaces also on papers. Figures \ref{fig:paper_prototype_1} and \ref{fig:paper_prototype_2} are two example user interfaces of the paper prototype. After finishing a task, the participant filled in the task assessment form and answered some questions from the researchers. All participants thought the tasks were realistic and they had come across many times in real lives. They also commented that the tasks covered all the information they needed when using the Contacts application. In general, the participants had positive feedbacks about the prototype. For instance, a user liked the tagging feature and actively used it a lot through out the scenarios. Furthermore, most of the users only used the name of the service as search keyword once every 20 scenarios, instead they often looked up the contact by using information from the scenarios which were remarkable, relevant, and personal. This was a definitely good sign which indicated the capabilities of tags in directing users to the right contacts from miscellaneous information. On the other hand, some participants admitted that they are sometimes too lazy to enter text on their mobile phones even though they knew that some information about a contact was absolutely necessary. This issue again pointed out the importance of tags suggestion which we have already covered in previous sections.
+After conducting the survey, Nguyen et. al. created a paper prototype of a mobile phone Contacts application to verify their findings. The paper prototype was used in various user study scenarios. At the start of each scenario, the researchers explained to the users new features in the Contacts application. After that participants were requested to perform tasks by interacting with the paper prototype. A researcher acted as the application by responding to users' interactions with other user interfaces also on papers. After finishing a task, the participant filled in the task assessment form and answered some questions from the researchers. All participants thought the tasks were realistic and they had come across many times in real lives. They also commented that the tasks covered all the information they needed when using the Contacts application. In general, the participants had positive feedbacks about the prototype. For instance, a user liked the tagging feature and actively used it a lot through out the scenarios. Furthermore, most of the users only used the name of the service as search keyword once every 20 scenarios, instead they often looked up the contact by using information from the scenarios which were remarkable, relevant, and personal. This was a definitely good sign which indicated the capabilities of tags in directing users to the right contacts from miscellaneous information. On the other hand, some participants admitted that they are sometimes too lazy to enter text on their mobile phones even though they knew that some information about a contact was absolutely necessary. This issue again pointed out the importance of tags suggestion which we have already covered in previous sections.
 
 \textit{\textbf{Summary}}: To sum up, we have comprehensively investigated a study about tagging in general and another study about tagging in a mobile Contacts application. Both studies suggest that tagging is an essential aspect which could help users organize their data. From Flickr/ZoneTag, we understand the motivations behind tagging, and the recommendations from the researchers will direct us when we build our own system. From the study in Korea, tagging in a Contacts application is once more affirmed to be necessary, and the paper prototype is really helpful for us in designing our application's user interfaces.
 
@@ -139,13 +139,13 @@ When designing a context-aware system, the method to capture context information
     \item \textit{Context server}: This method expands the middleware approach by introducing a remote server. This server aggregates sensor data then provides access to authorized clients. The first advantage of this technique is reusing sensor and introduce an administration layer for the contextual data. The second advantage is saving the clients from resource intensive operations since almost all client devices in a context-aware systems are mobile devices with limited computing power, memory, and energy. On the other hand, this approach requires a complex communication protocol between clients and the server, and the network performance can sometimes become the bottleneck of the system.
 \end{itemize}
 
-Regardless of what method a system chooses to capture contextual data, logically separating context detection and context consumption is essential in enhancing extensibility and reusability of the system. Figure \ref{fig:context_aware_systems} illustrates the layered logical architecture which was described by Ailisto et. al. in 2002 \cite{ailisto2002structuring}.
+Regardless of what method a system chooses to capture contextual data, logically separating context detection and context consumption is essential in enhancing extensibility and re-usability of the system. Figure \ref{fig:context_aware_systems} illustrates the layered logical architecture which was described by Ailisto et. al. in 2002 \cite{ailisto2002structuring}.
 
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[scale=0.6]{pics/context_aware_systems}
 \caption{Layered Conceptual Framework for Context-aware Systems}\label{fig:context_aware_systems}
-\source{Reprinted from "A survey on context-aware systems", by Matthias Baldauf, Schahram Dustdar, and Florian Rosenberg, 2007, International Journal of Ad Hoc and Ubiquitous Computing, 2(4):263-277.}
+%\source{Reprinted from "A survey on context-aware systems", by Matthias Baldauf, Schahram Dustdar, and Florian Rosenberg, 2007, International Journal of Ad Hoc and Ubiquitous Computing, 2(4):263-277.}
 \end{centering}
 \end{figure}
 
@@ -195,37 +195,37 @@ The next important thing we need to know when designing a context-aware system i
 
 After investigating architecture and design principles of context-aware systems, we will now thoroughly examine Forget-me-not, a context-aware program used for Intimate Computing. Forget-me-not \cite{lamming1994forget} is a project attempting to find a method to assist human memory using mobile and ubiquitous computing. It aims to solve the problem of growing information load in daily life.
 
-\begin{figure}[!h]
-\begin{centering}
-\includegraphics[scale=0.45]{pics/episodic_device}
-\caption{Using A Prosthetic Episodic Memory Device}\label{fig:episodic_device}
-\source{Reprinted from "Forget-me-not: Intimate computing in support of human memory", by Mik Lamming and Mike Flynn, 1994, In Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human Interface, page 4.}
-\end{centering}
-\end{figure}
+%\begin{figure}[!h]
+%\begin{centering}
+%\includegraphics[scale=0.45]{pics/episodic_device}
+%\caption{Using A Prosthetic Episodic Memory Device}\label{fig:episodic_device}
+%\source{Reprinted from "Forget-me-not: Intimate computing in support of human memory", by Mik Lamming and Mike Flynn, 1994, In Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human Interface, page 4.}
+%\end{centering}
+%\end{figure}
 
 In order to develop Forget-me-not, the researchers introduced a new computing model called ``Intimate Computing''. It was based on the definition of Ubiquitous Computing by Weiser \cite{weiser1991computer}, it consisted of tiny Personal Digital Assistants (PDAs) with wireless communication capability such as cell phones, laptops, wearable devices. Those devices always escorted the users so they can be tailored to their own preferences. Moreover, since they were involved in many of users' daily activities, the devices became intimate with them. The more intimacy the devices had, the more valuable they were. Furthermore, it is notable that Intimate Computing provided the computing devices with the users' real world contexts.
 
-Utilizing Intimate Computing, the researchers attempted to solve the problem of forgetting one's own information. Since the PDAs had access to users' contexts, they could use the context as a useful key to index information automatically. According to the authors, a detail of a past event like the name of a document was probably hard for a user to remember. However, the context of that event could be easier to recall such as the person who gave the document to the user, the place when it happened, the task the user was doing. Psychology researchers also developed theories about this kind of physical contexts. They called it episodic or autobiographical memory. The psychologists discovered that people instinctively arrange memories of past events into episodes, and then the location of the episode, the people around, the activities that had happened before, during, and after the episode were solid clues for recall. Furthermore, a study by Eldridge et. al. \cite{eldridge1994autobiographical} even led us to believe that we could make a prosthetic episodic memory device. The device was called a \textit{memory prosthesis} which followed users and captured critical information and context from their lives, then it could organize this information into a structure which mimicked the episodic memories of human beings. As a result, people could retrieve details of their fading memories by looking up the episodes which were accumulated in the storage of their prosthetic memory devices (Figure \ref{fig:episodic_device}). In other words, users could use small, easy to remember things about a context to bring back the details that they had forgotten.
+Utilizing Intimate Computing, the researchers attempted to solve the problem of forgetting one's own information. Since the PDAs had access to users' contexts, they could use the context as a useful key to index information automatically. According to the authors, a detail of a past event like the name of a document was probably hard for a user to remember. However, the context of that event could be easier to recall such as the person who gave the document to the user, the place when it happened, the task the user was doing. Psychology researchers also developed theories about this kind of physical contexts. They called it episodic or autobiographical memory. The psychologists discovered that people instinctively arrange memories of past events into episodes, and then the location of the episode, the people around, the activities that had happened before, during, and after the episode were solid clues for recall. Furthermore, a study by Eldridge et. al. \cite{eldridge1994autobiographical} even led us to believe that we could make a prosthetic episodic memory device. The device was called a \textit{memory prosthesis} which followed users and captured critical information and context from their lives, then it could organize this information into a structure which mimicked the episodic memories of human beings. As a result, people could retrieve details of their fading memories by looking up the episodes which were accumulated in the storage of their prosthetic memory devices. In other words, users could use small, easy to remember things about a context to bring back the details that they had forgotten.
 
-Forget-me-not was Lamming et. al.'s first attempt \cite{lamming1994forget} in creating a functioning prototype of a prosthetic episodic memory device. The first aspect of the device which the researchers tackled was user interfaces. They tried to design the interfaces to be as easy to use and intuitive as possible since it should be easier to remember how to operate Forget-me-not than to remember past events. Figure \ref{fig:forget_me_not} shows the Forget-me-not device developed in 1994. The software was implemented on a ParcTab - a portable device built in the Computer Science Laboratory at Xerox PARC.
+Forget-me-not was Lamming et. al.'s first attempt \cite{lamming1994forget} in creating a functioning prototype of a prosthetic episodic memory device. The first aspect of the device which the researchers tackled was user interfaces. They tried to design the interfaces to be as easy to use and intuitive as possible since it should be easier to remember how to operate Forget-me-not than to remember past events. The software was implemented on a ParcTab - a portable device built in the Computer Science Laboratory at Xerox PARC.
 
-\begin{figure}[!h]
-\begin{centering}
-\includegraphics[scale=0.7]{pics/forget_me_not}
-\caption{Forget-me-not Implemented on The ParcTab Hardware}\label{fig:forget_me_not}
-\source{Reprinted from "Forget-me-not: Intimate computing in support of human memory", by Mik Lamming and Mike Flynn, 1994, In Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human Interface, page 4.}
-\end{centering}
-\end{figure}
+%\begin{figure}[!h]
+%\begin{centering}
+%\includegraphics[scale=0.7]{pics/forget_me_not}
+%\caption{Forget-me-not Implemented on The ParcTab Hardware}\label{fig:forget_me_not}
+%\source{Reprinted from "Forget-me-not: Intimate computing in support of human memory", by Mik Lamming and Mike Flynn, 1994, In Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human Interface, page 4.}
+%\end{centering}
+%\end{figure}
 
-By accompanying users, the ParcTab accumulated data about different users' activities then it arranged these data into a personal biography. In the simplest prototype, Forget-me-not required users to provide a list of devices where data could be gathered. When a user interacted with a device on the list, ParcTab automatically collected the device's name and location. The operations carried out by the user on that device were also collected together with a timestamp. When two people both wearing ParcTabs met each other, their devices would start exchanging information in regard to their preset privacy settings. Figure \ref{fig:intimate_computing} illustrates this model. According to the authors, the Forget-me-not prototype was deployed for a few months and to some extent confirmed the applicability of the Intimate Computing model. 
+By accompanying users, the ParcTab accumulated data about different users' activities then it arranged these data into a personal biography. In the simplest prototype, Forget-me-not required users to provide a list of devices where data could be gathered. When a user interacted with a device on the list, ParcTab automatically collected the device's name and location. The operations carried out by the user on that device were also collected together with a timestamp. When two people both wearing ParcTabs met each other, their devices would start exchanging information in regard to their preset privacy settings. According to the authors, the Forget-me-not prototype was deployed for a few months and to some extent confirmed the applicability of the Intimate Computing model. 
 
-\begin{figure}[!h]
-\begin{centering}
-\includegraphics[scale=0.6]{pics/intimate_computing}
-\caption{Intimate Computing Simple Model}\label{fig:intimate_computing}
-\source{Reprinted from "Forget-me-not: Intimate computing in support of human memory", by Mik Lamming and Mike Flynn, 1994, In Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human Interface, page 4.}
-\end{centering}
-\end{figure}
+%\begin{figure}[!h]
+%\begin{centering}
+%\includegraphics[scale=0.6]{pics/intimate_computing}
+%\caption{Intimate Computing Simple Model}\label{fig:intimate_computing}
+%\source{Reprinted from "Forget-me-not: Intimate computing in support of human memory", by Mik Lamming and Mike Flynn, 1994, In Proc. FRIEND21, 1994 Int. Symp. on Next Generation Human Interface, page 4.}
+%\end{centering}
+%\end{figure}
 
 \textit{\textbf{Summary}}: To sum up, in this section we have decided to include historical contexts as tags associated with the contacts because they are highly valuable information and according to Whittaker et. al: whether a contact is important to a user or not largely depends on the \textit{history of their prior interactions} \cite{Whittaker2002}. After investigating the design principles of context-aware systems and Forget-me-not, it is our conclusion that some important aspects should be apply to our context-aware Contact application as follows:
 
@@ -257,13 +257,13 @@ Many social network sites support a method for participants to leave messages on
 
 Besides user profiles, connections, comments, and private messages, social network sites differ vastly in functionalities and participants. Some sites have photos and videos sharing features while other ones have built-in blogging capability. A few social network sites are specified for mobile phones such as Dodgeball \cite{humphreys2007mobile}. However, most web-based social networks also support mobile devices with some limitation like Facebook, LinkedIn, MySpace. Several social network sites are designed for users in particular geographic regions and languages. There are also some social networks which target particular religious, ethnic, political, or other personality-driven groups. Furthermore, social networks for dogs and cats even exist and their owners will be the one who manage their pet's profile.
 
-\begin{figure}[p]
-\begin{centering}
-\includegraphics[scale=0.8]{pics/social_network_history}
-\caption{Timeline of the launch dates of various major social network sites and dates when community sites re-launched with social network features}\label{fig:social_network_history}
-\source{Reprinted from "Social network sites: Definition, history, and scholarship", by Danah M Boyd and Nicole B Ellison, 2010, Engineering Management Review, IEEE, 38(3):16-31.}
-\end{centering}
-\end{figure}
+%\begin{figure}[p]
+%\begin{centering}
+%\includegraphics[scale=0.8]{pics/social_network_history}
+%\caption{Timeline of the launch dates of various major social network sites and dates when community sites re-launched with social network features}\label{fig:social_network_history}
+%\source{Reprinted from "Social network sites: Definition, history, and scholarship", by Danah M Boyd and Nicole B Ellison, 2010, Engineering Management Review, IEEE, 38(3):16-31.}
+%\end{centering}
+%\end{figure}
 
 \subsection{Graphy vs. Social Network Sites}
 \subsubsection{Similarities}
